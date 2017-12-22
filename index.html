@@ -1,0 +1,158 @@
+<html lang="en">
+  <head>
+    <title>Lexis Hanson</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="description" content="Lexis is cool, perhaps you can become cool by association.">
+    <meta name="author" content="Lexis Hanson">
+    <script src="https://d3js.org/d3.v4.js"></script>    <!-- <link rel="shortcut icon" href="favicon.png"> -->
+    <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,100,300,500,800" rel="stylesheet" type="text/css"> -->
+    <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="./style.css">
+
+    
+
+</head>
+<body>
+    <div class="header" id="header">
+        <div class="title"><a id="top-link">Lexis Hanson</a></div>
+        <a id="projects-link" class="lex-page-link lex-hoverable">Projects</a>
+        <a id="skills-link" class="lex-page-link lex-hoverable">Skills</a>
+        <a id="contact-link" class="lex-page-link lex-hoverable">Contact</a>
+        <a class="lex-page-link resume">Resume</a>
+    </div>
+
+    <div id="top-section" class="section top-section">
+       <div class="top-section-title">Lexis Hanson</div>
+       <!-- <p>TOP SECTION</p> -->
+       <canvas width="960" height="500"></canvas>
+    </div>
+    <div
+      id="projects-section"
+      class="section projects-section"
+    >
+      PROJECTS GO HERE
+    </div>
+    <div
+      id="skills-section"
+      class="section skills-section"
+    >
+      SKILLS GO HERE
+    </div>
+    <div
+      id="contact-section"
+      class="section contact-section"
+    >
+      CONTACT THE LEX
+    </div>
+
+    <script type="text/javascript">
+console.log('d3', d3);
+const scrollIt = element =>
+  window.scrollTo({
+    behavior: 'smooth',
+    left: 0,
+    top: element.offsetTop
+  });
+const addLink = linkName =>
+  document
+    .getElementById(`${linkName}-link`)
+    .addEventListener('click', () =>
+      scrollIt(document.getElementById(`${linkName}-section`))
+    );
+['top', 'projects', 'skills', 'contact'].forEach(addLink);
+
+// const sections = document.querySelectorAll('.js-section');
+// const btns = document.getElementById('');
+//
+// btns[0].addEventListener('click', () => {
+//   scrollIt(sections[0]);
+// });
+//
+// btns[1].addEventListener('click', () => {
+//   scrollIt(sections[1]);
+// });
+//
+// btns[2].addEventListener('click', () => {
+//   scrollIt(sections[2]);
+// });
+//
+// btns[3].addEventListener('click', () => {
+//   scrollIt(sections[3]);
+// });
+
+const headerElement = document.getElementById('header');
+const onScroll = () => {
+  console.log(window.innerHeight, window.pageYOffset);
+  if (window.innerHeight < window.pageYOffset + 100) {
+    headerElement.classList.add('stuck-to-top');
+  } else {
+    headerElement.classList.remove('stuck-to-top');
+  }
+};
+document.addEventListener('scroll', onScroll);
+
+var canvas = document.querySelector('canvas'),
+  context = canvas.getContext('2d'),
+  width = canvas.width,
+  height = canvas.height,
+  radius = 2.5,
+  minDistance = 80,
+  maxDistance = 100,
+  minDistance2 = minDistance * minDistance,
+  maxDistance2 = maxDistance * maxDistance;
+
+var tau = 2 * Math.PI,
+  n = 100,
+  particles = new Array(n);
+
+for (var i = 0; i < n; ++i) {
+  particles[i] = {
+    x: width * Math.random(),
+    y0: height * Math.random(),
+    v: 0.1 * (Math.random() - 0.5)
+  };
+}
+
+d3.timer(function(elapsed) {
+  context.clearRect(0, 0, width, height);
+
+  for (var i = 0; i < n; ++i) {
+    for (var j = i + 1; j < n; ++j) {
+      var pi = particles[i],
+        pj = particles[j],
+        dx = pi.x - pj.x,
+        dy = pi.y - pj.y,
+        d2 = dx * dx + dy * dy;
+      if (d2 < maxDistance2) {
+        context.globalAlpha =
+          d2 > minDistance2
+            ? (maxDistance2 - d2) / (maxDistance2 - minDistance2)
+            : 1;
+        context.beginPath();
+        context.moveTo(pi.x, pi.y);
+        context.lineTo(pj.x, pj.y);
+        context.stroke();
+      }
+    }
+  }
+
+  context.globalAlpha = 1;
+
+  for (var i = 0; i < n; ++i) {
+    var p = particles[i];
+    p.y = p.y0 + elapsed * p.v;
+    if (p.y > height + maxDistance)
+      (p.x = width * Math.random()), (p.y0 -= height + 2 * maxDistance);
+    else if (p.y < -maxDistance)
+      (p.x = width * Math.random()), (p.y0 += height + 2 * maxDistance);
+    context.beginPath();
+    context.arc(p.x, p.y, radius, 0, tau);
+    context.fill();
+  }
+});
+
+// TODO: add Google analytics
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  background: #f9f7f6;
+  color: #404d5b;
+  font-weight: 300;
+  font-size: 1em;
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+/* HOVER STYlES */
+.lex-hoverable {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.4);
+}
+.lex-hoverable:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+.lex-hoverable:active {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: calc(100% - 100px);
+  background: rgba(255, 255, 255, 0);
+  padding: 1rem 1.5rem;
+  width: 100%;
+}
+.header .title {
+  display: none;
+}
+
+.lex-page-link {
+  margin: 0 1em;
+  font-weight: 400;
+}
+
+.header.stuck-to-top {
+  top: 0;
+  background: white;
+  position: fixed;
+  justify-content: flex-end;
+}
+/* .header.stuck-to-top .btn {
+  align-self: flex-end;
+} */
+.header.stuck-to-top .title {
+  flex-grow: 1;
+}
+.header.stuck-to-top .title {
+  display: block;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* TOP SECTION */
+
+.section {
+  width: 100%;
+  height: 100vh;
+  /* line-height: 100vh; */
+  /* text-align: center; */
+}
+.section:nth-child(even) {
+  background: #eee;
+}
+.section:nth-child(odd) {
+  background: #ccc;
+}
+
+.top-section-title {
+  position: absolute;
+  margin: 1em;
+  font-size: 4rem;
+  top: 0;
+}
