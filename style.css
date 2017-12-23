@@ -14,6 +14,10 @@ body {
   font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
+ul {
+  list-style: none;
+}
+
 /* HOVER STYlES */
 .lex-hoverable {
   cursor: pointer;
@@ -51,6 +55,8 @@ body {
   background: white;
   position: fixed;
   justify-content: flex-end;
+  z-index: 1;
+  box-shadow: 1px 1px 1px rgba(10, 10, 10, 0.3);
 }
 /* .header.stuck-to-top .btn {
   align-self: flex-end;
@@ -84,4 +90,42 @@ body {
   margin: 1em;
   font-size: 4rem;
   top: 0;
+}
+
+/* SECTIONS */
+.box {
+  padding: 2rem 1rem;
+}
+
+/* PROJECTS */
+.projects-box {
+  max-width: 1080px;
+  margin: auto;
+}
+.project-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.box-item {
+  flex: inherit;
+  margin: 2rem;
+  padding: 1rem;
+  /* flex-basis: 100px; */
+}
+
+.project-logo {
+  background: #ffffff;
+  max-width: 300px;
+}
+
+.project-logo {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
 }
