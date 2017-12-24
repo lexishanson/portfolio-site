@@ -30,6 +30,10 @@ ul {
   color: rgba(0, 0, 0, 0.8);
 }
 
+.active-class {
+  color: rgba(0, 0, 0, 0.6);
+}
+
 /* HEADER */
 
 .header {
@@ -43,10 +47,12 @@ ul {
 }
 .header .title {
   display: none;
+  flex-shrink: 0;
 }
 
 .lex-page-link {
   margin: 0 1em;
+  overflow: hidden;
   font-weight: 400;
 }
 
@@ -71,10 +77,18 @@ ul {
 }
 
 /* TOP SECTION */
+.canvas {
+  z-index: 1;
+  position: absolute;
+}
 
+.about {
+  color: red;
+}
 .section {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
   /* line-height: 100vh; */
   /* text-align: center; */
 }
@@ -121,8 +135,6 @@ ul {
 
 .project-logo {
   position: relative;
-  width: 250px;
-  height: 250px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -140,14 +152,25 @@ ul {
 .item {
   display: inline-block;
   margin-bottom: 8px;
-  width: calc(50% - 4px);
+  flex-basis: 100%;
+  flex-grow: 1;
   text-decoration: none;
   color: black;
+  padding: 1rem;
+  /* background: white; */
 }
 
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 450px) {
   .item {
-    width: calc(25% - 6px);
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .item {
+    flex-basis: 33%;
+    max-width: 33%;
   }
 }
 
@@ -157,52 +180,40 @@ ul {
 } */
 
 figure {
+  background: white;
   margin: 0;
   overflow: hidden;
+  position: relative;
+}
+
+figure div {
+  background: orange;
+  height: 500px;
+  width: 500px;
+  margin: -100px;
+
+  transform: translate(-200px, -100px) rotate(-20deg);
 }
 
 figcaption {
+  padding: 1rem;
   margin-top: 15px;
 }
 
 img {
   border: none;
   max-width: 100%;
-  height: 250px;
-  width: 250px;
+  width: 100%;
   display: block;
   background: #ffff;
   /* transition: transform 0.2s ease-in-out; */
 }
 
-/* .wrap {
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
+i {
+  font-size: 100px;
+  color: salmon;
 }
 
-.wrap div {
-  width: 33%;
-  padding-bottom: 23%;
-  margin: 1%;
-  float: left;
+.skills-icon {
+  background-image: url('./assets/redux-logo.svg');
 }
-.container-dsr {
-  background-image: url('./assets/gifsearch.png');
-  background-size: cover;
-}
-*/
-/* .wrap {
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.wrap div {
-  width: 23vw;
-  height: 23vw;
-  margin: 1vw 0;
-  background: gold;
-} */

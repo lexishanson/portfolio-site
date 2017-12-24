@@ -9,9 +9,12 @@
     <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,100,300,500,800" rel="stylesheet" type="text/css"> -->
     <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
 
 </head>
 <body>
+
     <div class="header" id="header">
         <div class="title"><a id="top-link">Lexis Hanson</a></div>
         <a id="projects-link" class="lex-page-link lex-hoverable">Projects</a>
@@ -21,49 +24,20 @@
     </div>
 
     <div id="top-section" class="section top-section">
+    <canvas width="960" height="500"></canvas>
+
        <div class="top-section-title">Lexis Hanson</div>
+
        <!-- <p>TOP SECTION</p> -->
-       <canvas width="960" height="500"></canvas>
+         <!-- <canvas width="960" height="500"></canvas> -->
+
     </div>
     <div
       id="projects-section"
       class="section projects-section"
     >
-        <h1>Projects</h1>
-            <div class="box projects-box">
-                <!-- <ul class="project-container">
-                    <li class="box-item">
-                      <img src="./assets/dsr.png" alt="dsr" class="project-logo" />
-                        <div>
-                            hi
-                        </div>
-                    </li>
-                    <li class="box-item">
-                        <img src="./assets/new-cryptoprices.svg" alt="cryptoprices" class="project-logo" />
-                        <div>
-                            hi
-                        </div>
-                    </li>
-                    <li class="box-item">
-                      <img src="./assets/gifsearch.png" alt="gifsearch" class="project-logo" />
-                        <div>
-                            hi
-                        </div>
-                    </li>
-                </ul>
-
-                <div class="wrap">
-                  <div>
-                    <div class="container-dsr"></div>
-                  </div>
-                  <div class="container cryptoprices">
-                  </div>
-                  <div class="container gifsearch">
-                  </div>
-
-                  </div>
-            </div> -->
-
+      <h1>Projects</h1>
+      <div class="box projects-box">
             <div class="test-parent">
               <div class="item">
                 <figure>
@@ -83,7 +57,7 @@
               </div>
               <div class="item">
                 <figure>
-                  <img src="./assets/gifsearch.png" alt="">
+                  <div></div>
                   <figcaption>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut labore et dolore magna aliqua
                   </figcaption>
@@ -98,67 +72,95 @@
                 </figure>
               </div>
             </div>
+        </div>
     </div>
     <div
       id="skills-section"
       class="section skills-section"
     >
       SKILLS GO HERE
+      <div>
+        <i class="devicon-nodejs-plain-wordmark"></i>
+        <i class="devicon-html5-plain-wordmark"></i>
+        <i class="devicon-atom-plain-wordmark"></i>
+        <i class="devicon-babel-plain-wordmark"></i>
+        <i class="devicon-css3-plain-wordmark"></i>
+        <i class="devicon-express-plain-wordmark"></i>
+        <i class="devicon-git-plain-wordmark"></i>
+        <i class="devicon-github-plain-wordmark"></i>
+        <i class="devicon-confluence-plain-wordmark"></i>
+        <i class="devicon-heroku-plain-wordmark"></i>
+        <i class="devicon-javascript-plain-wordmark"></i>
+        <i class="devicon-react-plain-wordmark"></i>
+        <i class="devicon-python-plain-wordmark"></i>
+        <i class="devicon-webpack-plain-wordmark"></i>
+        <i class="devicon-mocha-plain-wordmark"></i>
+        <i class="devicon-bitbucket-plain-wordmark"></i>
+      </div>
     </div>
     <div
       id="contact-section"
       class="section contact-section"
     >
-      CONTACT THE LEX
+      <h2>Thanks for stopping by!</h2>
+      <p>Get in touch</p>
     </div>
 
     <script type="text/javascript">
 console.log('d3', d3);
+const headerElement = document.getElementById('header');
 const scrollIt = element =>
   window.scrollTo({
     behavior: 'smooth',
     left: 0,
-    top: element.offsetTop
+    top: element.offsetTop - headerElement.clientHeight
   });
-const addLink = linkName =>
-  document
-    .getElementById(`${linkName}-link`)
-    .addEventListener('click', () =>
-      scrollIt(document.getElementById(`${linkName}-section`))
-    );
-['top', 'projects', 'skills', 'contact'].forEach(addLink);
 
-// const sections = document.querySelectorAll('.js-section');
-// const btns = document.getElementById('');
-//
-// btns[0].addEventListener('click', () => {
-//   scrollIt(sections[0]);
-// });
-//
-// btns[1].addEventListener('click', () => {
-//   scrollIt(sections[1]);
-// });
-//
-// btns[2].addEventListener('click', () => {
-//   scrollIt(sections[2]);
-// });
-//
-// btns[3].addEventListener('click', () => {
-//   scrollIt(sections[3]);
-// });
+const addScrollTo = linkAndSection => {
+  linkAndSection.link.addEventListener('click', () =>
+    scrollIt(linkAndSection.section)
+  );
+};
 
-const headerElement = document.getElementById('header');
-const onScroll = () => {
-  console.log(window.innerHeight, window.pageYOffset);
+const sectionsAndLinks = ['top', 'projects', 'skills', 'contact'].map(
+  linkName => ({
+    section: document.getElementById(`${linkName}-section`),
+    link: document.getElementById(`${linkName}-link`)
+  })
+);
+
+sectionsAndLinks.forEach(addScrollTo);
+
+const hightlightOnScreenLink = () => {
+  sectionsAndLinks.forEach(sectionAndLink => {
+    const elTop = sectionAndLink.section.offsetTop;
+    const isOnScreen =
+      elTop > window.pageYOffset &&
+      elTop < window.pageYOffset + window.innerHeight;
+    if (isOnScreen) {
+      sectionAndLink.link.classList.add('active-class');
+    } else {
+      sectionAndLink.link.classList.remove('active-class');
+    }
+  });
+};
+
+const toggleHeaderFixed = () => {
   if (window.innerHeight < window.pageYOffset + 100) {
     headerElement.classList.add('stuck-to-top');
   } else {
     headerElement.classList.remove('stuck-to-top');
   }
 };
-document.addEventListener('scroll', onScroll);
 
-var canvas = document.querySelector('canvas'),
+const onScroll = () => {
+  toggleHeaderFixed();
+  hightlightOnScreenLink();
+};
+document.addEventListener('scroll', onScroll);
+onScroll();
+
+const canvas = document.querySelector('canvas'),
   context = canvas.getContext('2d'),
   width = canvas.width,
   height = canvas.height,
@@ -168,7 +170,7 @@ var canvas = document.querySelector('canvas'),
   minDistance2 = minDistance * minDistance,
   maxDistance2 = maxDistance * maxDistance;
 
-var tau = 2 * Math.PI,
+const tau = 2 * Math.PI,
   n = 100,
   particles = new Array(n);
 
@@ -217,6 +219,16 @@ d3.timer(function(elapsed) {
     context.fill();
   }
 });
+
+// TODO: add Google analytics
+
+// TODO: add Google analytics
+
+// TODO: add Google analytics
+// TODO: add Google analytics
+
+// TODO: add Google analytics
+// TODO: add Google analytics
 
 // TODO: add Google analytics
 </script>
