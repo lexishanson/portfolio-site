@@ -32,6 +32,7 @@ ul {
 
 .active-class {
   color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(3, 8, 28, 0.1);
 }
 
 /* HEADER */
@@ -54,6 +55,8 @@ ul {
   margin: 0 1em;
   overflow: hidden;
   font-weight: 400;
+  font-size: 1.2rem;
+  color: rgba(89, 71, 121, 1);
 }
 
 .header.stuck-to-top {
@@ -67,30 +70,69 @@ ul {
 /* .header.stuck-to-top .btn {
   align-self: flex-end;
 } */
-.header.stuck-to-top .title {
-  flex-grow: 1;
-}
+
 .header.stuck-to-top .title {
   display: block;
+  flex-grow: 1;
   font-weight: 600;
   text-transform: uppercase;
 }
 
 /* TOP SECTION */
-.canvas {
-  z-index: 1;
-  position: absolute;
+
+.hero {
+  background-image: url("./assets/aerial.jpg");
+  background-size: contain;
 }
 
 .about {
-  color: red;
+  background-color: rgba(90, 97, 117, .1);
+  position: absolute;
+  margin: -1em;
+  font-size: 4rem;
 }
+
+.hero-content {
+  position: absolute;
+  background-color: rgba(130, 140, 171, .2);
+  border-radius: 1rem;
+}
+
+.hero-content h2 {
+    padding: 1rem;
+}
+
+.top-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-section-title {
+  position: absolute;
+  margin: 1rem;
+  top: 0;
+  left: 1rem;
+  font-size: 4rem;
+  background-color: rgba(130, 140, 171, .2);
+}
+
+.top-section img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+/* SECTIONS */
+
 .section {
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-  /* line-height: 100vh; */
-  /* text-align: center; */
+}
+
+.section h1 {
+  padding: 40px;
 }
 .section:nth-child(even) {
   background: #eee;
@@ -99,18 +141,21 @@ ul {
   background: #ccc;
 }
 
-.top-section-title {
-  position: absolute;
-  margin: 1em;
-  font-size: 4rem;
-  top: 0;
+
+/* Contact Section */
+.contact-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* SECTIONS */
-.box {
-  padding: 2rem 1rem;
+.contact-section h1 {
+  align-self: flex-start;
 }
 
+.footer {
+  align-self: flex-end;
+}
 /* PROJECTS */
 .projects-box {
   max-width: 1080px;
@@ -174,13 +219,15 @@ ul {
   }
 }
 
-/*
 .item:hover img {
-  transform: scale(1.15);
-} */
+  transform: scale(1.05);
+}
 
 figure {
   background: white;
+  border: 1px solid rgba(170, 167, 170, 0.8);
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px rgba(170, 167, 170, 1);
   margin: 0;
   overflow: hidden;
   position: relative;
@@ -197,16 +244,20 @@ figure div {
 
 figcaption {
   padding: 1rem;
-  margin-top: 15px;
+  margin-top: 3px;
 }
 
-img {
+figure img {
   border: none;
   max-width: 100%;
   width: 100%;
   display: block;
   background: #ffff;
-  /* transition: transform 0.2s ease-in-out; */
+  transition: transform 0.2s ease-in-out;
+}
+
+figure img:hover {
+  background-color: rgba(170, 167, 170, 0.8);
 }
 
 i {
