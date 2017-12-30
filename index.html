@@ -1,124 +1,149 @@
 
 <html lang="en">
   <head>
-    <title>Lexis Hanson</title>
+    <title class="color-7">Lexis Hanson</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <meta name="description" content="Lexis is cool, perhaps you can become cool by association.">
     <meta name="author" content="Lexis Hanson">
-    <!-- <script src="https://d3js.org/d3.v4.js"></script> -->
-    <!-- <link rel="shortcut icon" href="favicon.png"> -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <link rel="shortcut icon" href="favicon.png">
     <link href="//fonts.googleapis.com/css?family=Raleway:400,100,300,500,800" rel="stylesheet" type="text/css">
-    <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style.css">
-    <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
 
   </head>
 <body>
 <div>
     <div class="header" id="header">
-        <div class="title"><a id="top-link">Lexis Hanson</a></div>
-        <a id="projects-link" class="lex-page-link lex-hoverable">Projects</a>
-        <a id="skills-link" class="lex-page-link lex-hoverable">Skills</a>
-        <a id="contact-link" class="lex-page-link lex-hoverable">Contact</a>
-        <a class="lex-page-link resume">Resume</a>
-
+        <div class="header-inner">
+          <div
+            id="top-link"
+            class="header-item title color-7"
+          >Lexis Hanson</div>
+          <div
+            id="projects-link"
+            class="header-item lex-page-link lex-hoverable"
+          >Projects</div>
+          <div
+            id="about-link"
+            class="header-item lex-page-link lex-hoverable"
+          >About</div>
+          <div
+            id="contact-link"
+            class="header-item lex-page-link lex-hoverable"
+          >Contact</div>
+          <div class="header-item lex-page-link resume">Resume</div>
+      </div>
     </div>
     <div id="top-section" class="section top-section">
-      <div class="hero" width="100%" height="100%"></div>
-      <img src="./assets/aerial.jpg" width="960" height="700">
+      <div class="particles-container">
+        <canvas class="particles" width="2680" height="2000"></canvas>
+      </div>
+      <!-- <div class="hero" width="100%" height="100%"></div> -->
 
-      <div class="top-section-title">name</div>
-        <div class="hero-content">
+      <div class="top-section-title color-7">Lexis Hanson</div>
+        <div class="hero-content color-6">
           <h2>
             Welcome to my site.
           </h2>
           <p>....</p>
         </div>
 
-       <!-- <p>TOP SECTION</p> -->
-         <!-- <canvas width="960" height="500"></canvas> -->
 
+       <!-- <p>TOP SECTION</p> -->
     </div>
     <div
       id="projects-section"
       class="section projects-section"
     >
-      <h1>Projects</h1>
-      <div class="box projects-box">
-            <div class="test-parent">
-              <div class="item">
-                <figure>
-                  <img src="./assets/dsr.png" id="proj-img" alt="" />
-                  <figcaption>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                  </figcaption>
-                </figure>
-              </div>
-              <div class="item">
-                <figure>
-                  <img src="./assets/cryptoprices.svg" id="proj-img" alt="">
-                  <figcaption>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut labore et dolore magna aliqua
-                  </figcaption>
-                </figure>
-              </div>
-              <div class="item" id="proj-img">
-                <figure>
-                  <div></div>
-                  <figcaption>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut labore et dolore magna aliqua
-                  </figcaption>
-                </figure>
-              </div>
-              <div class="item">
-                <figure>
-                  <img src="./assets/dsr.png" id="proj-img" alt="">
-                  <figcaption>
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </figcaption>
-                </figure>
-              </div>
+      <div class="center-column">
+        <h1>Projects</h1>
+        <div class="box projects-box">
+          <div class="test-parent">
+            <div class="item">
+              <figure>
+                <img src="./assets/dsr.png" id="proj-img" alt="" />
+                <figcaption>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                </figcaption>
+              </figure>
             </div>
+            <div class="item">
+              <figure>
+                <img src="./assets/cryptoprices.svg" id="proj-img" alt="">
+                <figcaption>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut labore et dolore magna aliqua
+                </figcaption>
+              </figure>
+            </div>
+            <div class="item" id="proj-img">
+              <figure>
+                <div></div>
+                <figcaption>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut labore et dolore magna aliqua
+                </figcaption>
+              </figure>
+            </div>
+            <div class="item">
+              <figure>
+                <img src="./assets/dsr.png" id="proj-img" alt="">
+                <figcaption>
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <div
-      id="skills-section"
-      class="section skills-section"
+      id="about-section"
+      class="section about-section"
     >
-      <h1>Skills</h1>
-      <div>
-        <i class="devicon-nodejs-plain-wordmark"></i>
-        <i class="devicon-html5-plain-wordmark"></i>
-        <i class="devicon-atom-plain-wordmark"></i>
-        <i class="devicon-babel-plain-wordmark"></i>
-        <i class="devicon-css3-plain-wordmark"></i>
-        <i class="devicon-express-plain-wordmark"></i>
-        <i class="devicon-git-plain-wordmark"></i>
-        <i class="devicon-github-plain-wordmark"></i>
-        <i class="devicon-confluence-plain-wordmark"></i>
-        <i class="devicon-heroku-plain-wordmark"></i>
-        <i class="devicon-javascript-plain-wordmark"></i>
-        <i class="devicon-react-plain-wordmark"></i>
-        <i class="devicon-python-plain-wordmark"></i>
-        <i class="devicon-webpack-plain-wordmark"></i>
-        <i class="devicon-mocha-plain-wordmark"></i>
-        <i class="devicon-bitbucket-plain-wordmark"></i>
-      </div>
-      <div>
-        <h3>Other</h3>
-        <p>Redux, Mocha, Enzyme Salesforce, ...</p>
+      <div class="center-column">
+        <h1>About</h1>
+        <div>
+          <i class="devicon-nodejs-plain-wordmark"></i>
+          <i class="devicon-html5-plain-wordmark"></i>
+          <i class="devicon-atom-plain-wordmark"></i>
+          <i class="devicon-babel-plain-wordmark"></i>
+          <i class="devicon-css3-plain-wordmark"></i>
+          <i class="devicon-express-plain-wordmark"></i>
+          <i class="devicon-git-plain-wordmark"></i>
+          <i class="devicon-github-plain-wordmark"></i>
+          <i class="devicon-confluence-plain-wordmark"></i>
+          <i class="devicon-heroku-plain-wordmark"></i>
+          <i class="devicon-javascript-plain-wordmark"></i>
+          <i class="devicon-react-plain-wordmark"></i>
+          <i class="devicon-python-plain-wordmark"></i>
+          <i class="devicon-webpack-plain-wordmark"></i>
+          <i class="devicon-mocha-plain-wordmark"></i>
+          <i class="devicon-bitbucket-plain-wordmark"></i>
+        </div>
+        <div>
+          <h3>Other</h3>
+          <p>Redux, Mocha, Enzyme Salesforce, ...</p>
+        </div>
       </div>
     </div>
     <div
       id="contact-section"
       class="section contact-section"
     >
-      <h1>Get in touch</h1>
-      <p>Thanks for stopping by!</p>
-      <div class="footer">Footer</div>
+      <div class="center-column">
+        <h1>Contact</h1>
+        <p>Thanks for stopping by!</p>
+        <h3>Get in touch</h3>
+      </div>
     </div>
+    <div class="footer background-7">
+      <div class="center-column">
+        Footer
+      </div>
+  </div>
 
     <script type="text/javascript">
 
@@ -135,7 +160,7 @@ const addScrollTo = linkAndSection => {
   );
 };
 
-const sectionsAndLinks = ['top', 'projects', 'skills', 'contact'].map(
+const sectionsAndLinks = ['top', 'projects', 'about', 'contact'].map(
   linkName => ({
     section: document.getElementById(`${linkName}-section`),
     link: document.getElementById(`${linkName}-link`)
@@ -148,7 +173,7 @@ const hightlightOnScreenLink = () => {
   sectionsAndLinks.forEach(sectionAndLink => {
     const elTop = sectionAndLink.section.offsetTop;
     const isOnScreen =
-      elTop > window.pageYOffset &&
+      elTop >= window.pageYOffset &&
       elTop < window.pageYOffset + window.innerHeight;
     // const isStuck = [...sectionAndLink.link.parentNode.classList].includes("stuck-to-top");
     if (isOnScreen) {
@@ -196,65 +221,65 @@ document
     .addEventListener("mouseleave", e => onMouseOut(e))
 
 
-// const canvas = document.querySelector('canvas'),
-//   context = canvas.getContext('2d'),
-//   width = canvas.width,
-//   height = canvas.height,
-//   radius = 2.5,
-//   minDistance = 80,
-//   maxDistance = 100,
-//   minDistance2 = minDistance * minDistance,
-//   maxDistance2 = maxDistance * maxDistance;
-//
-// const tau = 2 * Math.PI,
-//   n = 100,
-//   particles = new Array(n);
-//
-// for (var i = 0; i < n; ++i) {
-//   particles[i] = {
-//     x: width * Math.random(),
-//     y0: height * Math.random(),
-//     v: 0.1 * (Math.random() - 0.5)
-//   };
-// }
-//
-// d3.timer(function(elapsed) {
-//   context.clearRect(0, 0, width, height);
-//
-//   for (var i = 0; i < n; ++i) {
-//     for (var j = i + 1; j < n; ++j) {
-//       var pi = particles[i],
-//         pj = particles[j],
-//         dx = pi.x - pj.x,
-//         dy = pi.y - pj.y,
-//         d2 = dx * dx + dy * dy;
-//       if (d2 < maxDistance2) {
-//         context.globalAlpha =
-//           d2 > minDistance2
-//             ? (maxDistance2 - d2) / (maxDistance2 - minDistance2)
-//             : 1;
-//         context.beginPath();
-//         context.moveTo(pi.x, pi.y);
-//         context.lineTo(pj.x, pj.y);
-//         context.stroke();
-//       }
-//     }
-//   }
-//
-//   context.globalAlpha = 1;
-//
-//   for (var i = 0; i < n; ++i) {
-//     var p = particles[i];
-//     p.y = p.y0 + elapsed * p.v;
-//     if (p.y > height + maxDistance)
-//       (p.x = width * Math.random()), (p.y0 -= height + 2 * maxDistance);
-//     else if (p.y < -maxDistance)
-//       (p.x = width * Math.random()), (p.y0 += height + 2 * maxDistance);
-//     context.beginPath();
-//     context.arc(p.x, p.y, radius, 0, tau);
-//     context.fill();
-//   }
-// });
+const canvas = document.querySelector('canvas'),
+  context = canvas.getContext('2d'),
+  width = canvas.width,
+  height = canvas.height,
+  radius = 2.5,
+  minDistance = 80,
+  maxDistance = 100,
+  minDistance2 = minDistance * minDistance,
+  maxDistance2 = maxDistance * maxDistance;
+
+const tau = 2 * Math.PI,
+  n = 100,
+  particles = new Array(n);
+
+for (var i = 0; i < n; ++i) {
+  particles[i] = {
+    x: width * Math.random(),
+    y0: height * Math.random(),
+    v: 0.1 * (Math.random() - 0.5)
+  };
+}
+
+d3.timer(function(elapsed) {
+  context.clearRect(0, 0, width, height);
+
+  for (var i = 0; i < n; ++i) {
+    for (var j = i + 1; j < n; ++j) {
+      var pi = particles[i],
+        pj = particles[j],
+        dx = pi.x - pj.x,
+        dy = pi.y - pj.y,
+        d2 = dx * dx + dy * dy;
+      if (d2 < maxDistance2) {
+        context.globalAlpha =
+          d2 > minDistance2
+            ? (maxDistance2 - d2) / (maxDistance2 - minDistance2)
+            : 1;
+        context.beginPath();
+        context.moveTo(pi.x, pi.y);
+        context.lineTo(pj.x, pj.y);
+        context.stroke();
+      }
+    }
+  }
+
+  context.globalAlpha = 1;
+
+  for (var i = 0; i < n; ++i) {
+    var p = particles[i];
+    p.y = p.y0 + elapsed * p.v;
+    if (p.y > height + maxDistance)
+      (p.x = width * Math.random()), (p.y0 -= height + 2 * maxDistance);
+    else if (p.y < -maxDistance)
+      (p.x = width * Math.random()), (p.y0 += height + 2 * maxDistance);
+    context.beginPath();
+    context.arc(p.x, p.y, radius, 0, tau);
+    context.fill();
+  }
+});
 
 // TODO: add Google analytics
 
