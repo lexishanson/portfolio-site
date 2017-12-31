@@ -191,16 +191,6 @@ h1 {
   font-size: 4rem;
 }
 
-.hero-content {
-  position: absolute;
-  background-color: rgba(130, 140, 171, .2);
-  border-radius: 1rem;
-}
-
-.hero-content h2 {
-    padding: 1rem;
-}
-
 .top-section {
   display: flex;
   align-items: center;
@@ -208,17 +198,31 @@ h1 {
   overflow: hidden;
 }
 
-.particles-container {
+.hero-content {
+  position: absolute;
+  background-color: rgba(130, 140, 171, .2);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.hero-content h2 {
+}
+
+.hero-content p {
+}
+
+
+#particles-js {
   position: absolute;
   overflow: hidden;
   height: 100vh;
   width: 100vw;
 }
 
-.particles {
+/* .particles {
   position: relative;
-  /* height: 100vmax; */
-}
+  height: 100vmax;
+} */
 
 .top-section-title {
   position: absolute;
