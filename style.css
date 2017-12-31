@@ -154,8 +154,8 @@ h1 {
 }
 
 .header.stuck-to-top {
+  background-color: white;
   top: 0;
-  background: white;
   font-size: 1rem;
   position: fixed;
   z-index: 1;
@@ -179,10 +179,6 @@ h1 {
 
 /* TOP SECTION */
 
-.hero {
-  background-image: url("./assets/aerial.jpg");
-  background-size: contain;
-}
 
 .about {
   background-color: rgba(90, 97, 117, .1);
@@ -200,15 +196,24 @@ h1 {
 
 .hero-content {
   position: absolute;
-  background-color: rgba(130, 140, 171, .2);
+  /* background-color: rgba(130, 140, 171, .2); */
   border-radius: 1rem;
   padding: 1rem;
+  width: 400px;
+  height: 400px;
+}
+
+.hero-image-container {
+  max-width: 60vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-content img {
+  overflow: hidden;
 }
 
 .hero-content h2 {
-}
-
-.hero-content p {
 }
 
 
@@ -385,8 +390,4 @@ figure img:hover {
 i {
   font-size: 100px;
   color: salmon;
-}
-
-.about-icon {
-  background-image: url('./assets/redux-logo.svg');
 }
