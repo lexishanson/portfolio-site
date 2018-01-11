@@ -115,9 +115,49 @@ h1 {
 /* LAYOUT */
 
 .center-column {
-  max-width: 960px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  padding: 5rem;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.about-section h3 {
+  padding-top: 2em;
+}
+
+.about-section .icons-grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 18px;
+
+  /* display: grid;
+  max-width: 640px;
+  grid-template-rows: repeat(8, 1fr);
+  grid-auto-rows: minmax(60px, auto);
+  grid-row-gap: 1em;
+  grid-column-gap: 1em; */
+  /* margin: auto; */
+  /* padding-left: 20px;
+  padding-right: 30px; */
+}
+
+
+.about-section .center-column .icon:before {
+  text-align: center;
+}
+
+.about-section .center-column .icon {
+  font-size: 55px;
+  color: #DAA25A;
+  padding: 3px;
+
 }
 
 /* HEADER */
@@ -126,8 +166,8 @@ h1 {
   font-size: 1.2rem;
   position: absolute;
   top: calc(100vh - 6rem);
-  /* background: rgba(255, 255, 255, 0); */
   width: 100%;
+  z-index: 1;
 }
 .header-inner {
   display: flex;
@@ -142,6 +182,7 @@ h1 {
 .header .title {
   display: none;
   flex-shrink: 0;
+  color: #3945a2;
 }
 
 .lex-page-link {
@@ -189,18 +230,20 @@ h1 {
 
 .top-section {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: baseline;
+  justify-content: space-around;
   overflow: hidden;
 }
 
 .hero-content {
+  margin-top: 150px;
   position: absolute;
   /* background-color: rgba(130, 140, 171, .2); */
   border-radius: 1rem;
-  padding: 1rem;
+  padding: 1em;
   width: 400px;
   height: 400px;
+
 }
 
 .hero-image-container {
@@ -209,11 +252,9 @@ h1 {
   margin-right: auto;
 }
 
-.hero-content img {
-  overflow: hidden;
-}
 
 .hero-content h2 {
+  margin-top: 1em;
 }
 
 
@@ -238,9 +279,14 @@ h1 {
 }
 
 .top-section img {
-  max-width: 100%;
-  width: 100%;
+  margin: auto;
+  max-width: 80%;
+  width: 800%;
   display: block;
+  overflow: hidden;
+  border-radius: 180px;
+  border: 1px solid rgba(10, 10, 10, 0.3);
+  box-shadow: 1px 1px 2px 2px rgba(10, 10, 10, 0.3);
 }
 
 /* SECTIONS */
@@ -269,12 +315,32 @@ h1 {
 }
 
 .contact-section .center-column h1 {
-  align-self: flex-start;
+
+}
+
+.contact-links {
+  max-height: 100px;
+}
+
+/* #github a:hover path {
+  fill: #0000;
+} */
+
+.contact-links a:hover path {
+  opacity: .8;
+}
+
+/* .contact-links a:hover path {
+  fill: #ffffff;
+} */
+
+.contact-links a {
+  text-decoration: none;
 }
 
 /* PROJECTS */
 .projects-box {
-  max-width: 1080px;
+  max-width: 800px;
   margin: auto;
 }
 .project-container {
@@ -284,32 +350,15 @@ h1 {
 
 .project-logo {
   background: #ffffff;
-  max-width: 300px;
+  max-width: 500px;
 }
 
 .project-logo {
   position: relative;
-  background-position: 50% 50%;
+  background-position: 30% 30%;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
-}
-
-/* FOOTER */
-.footer {
-  /* align-self: flex-end; */
-  /* background: rgba(0,0,0,0.8); */
-  color: white;
-  /* margin-top: -100%; */
-  width: 100%;
-  position:absolute;
-  bottom: 0;
-}
-.footer .center-column {
-  line-height: 3rem;
-  text-align: center;
-  /* display: flex; */
-  /* justify-content: center; */
 }
 
 /* TEST */
@@ -336,6 +385,7 @@ h1 {
     flex-basis: 50%;
     max-width: 50%;
   }
+
 }
 
 @media screen and (min-width: 650px) {
@@ -343,6 +393,7 @@ h1 {
     flex-basis: 33%;
     max-width: 33%;
   }
+
 }
 
 .item:hover img {
@@ -387,7 +438,21 @@ figure img:hover {
   background-color: rgba(170, 167, 170, 0.8);
 }
 
-i {
-  font-size: 100px;
-  color: salmon;
+/* FOOTER */
+.footer {
+  /* align-self: flex-end; */
+  /* background: rgba(0,0,0,0.8); */
+  color: white;
+  /* margin-top: -100%; */
+  width: 100%;
+  position:absolute;
+  bottom: 0;
+}
+.footer .center-column {
+  /* line-height: 4rem; */
+  margin-bottom: 1rem;
+  padding: .5rem;
+  text-align: center;
+  /* display: flex; */
+  justify-content: center;
 }
