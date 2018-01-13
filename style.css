@@ -121,44 +121,6 @@ h1 {
   padding: 5rem;
 }
 
-.about-content {
-  max-width: 800px;
-  margin: auto;
-}
-
-.about-section h3 {
-  padding-top: 2em;
-}
-
-.about-section .icons-grid {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 18px;
-
-  /* display: grid;
-  max-width: 640px;
-  grid-template-rows: repeat(8, 1fr);
-  grid-auto-rows: minmax(60px, auto);
-  grid-row-gap: 1em;
-  grid-column-gap: 1em; */
-  /* margin: auto; */
-  /* padding-left: 20px;
-  padding-right: 30px; */
-}
-
-
-.about-section .center-column .icon:before {
-  text-align: center;
-}
-
-.about-section .center-column .icon {
-  font-size: 55px;
-  color: #DAA25A;
-  padding: 3px;
-
-}
 
 /* HEADER */
 
@@ -220,14 +182,6 @@ h1 {
 
 /* TOP SECTION */
 
-
-.about {
-  background-color: rgba(90, 97, 117, .1);
-  position: absolute;
-  margin: -1em;
-  font-size: 4rem;
-}
-
 .top-section {
   display: flex;
   align-items: baseline;
@@ -284,9 +238,14 @@ h1 {
   width: 800%;
   display: block;
   overflow: hidden;
-  border-radius: 180px;
-  border: 1px solid rgba(10, 10, 10, 0.3);
-  box-shadow: 1px 1px 2px 2px rgba(10, 10, 10, 0.3);
+  /* border-radius: 180px; */
+  /* border: 1px solid rgba(10, 10, 10, 0.3); */
+  /* box-shadow: 1px 1px 2px 2px rgba(10, 10, 10, 0.3); */
+  box-shadow: none;
+  border: none;
+  border-radius: 10%;
+  margin: 0 25px 25px 25px;
+  filter: none;
 }
 
 /* SECTIONS */
@@ -308,37 +267,8 @@ h1 {
   background: #eee;
 }
 
-
-/* Contact Section */
-.contact-section .center-column {
-
-}
-
-.contact-section .center-column h1 {
-
-}
-
-.contact-links {
-  max-height: 100px;
-}
-
-/* #github a:hover path {
-  fill: #0000;
-} */
-
-.contact-links a:hover path {
-  opacity: .8;
-}
-
-/* .contact-links a:hover path {
-  fill: #ffffff;
-} */
-
-.contact-links a {
-  text-decoration: none;
-}
-
 /* PROJECTS */
+
 .projects-box {
   max-width: 800px;
   margin: auto;
@@ -355,7 +285,6 @@ h1 {
 
 .project-logo {
   position: relative;
-  background-position: 30% 30%;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
@@ -363,7 +292,7 @@ h1 {
 
 /* TEST */
 
-.test-parent {
+.item-parent {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; /* or space-around */
@@ -372,8 +301,8 @@ h1 {
 .item {
   display: inline-block;
   margin-bottom: 8px;
-  flex-basis: 100%;
-  flex-grow: 1;
+  flex-basis: 300px;
+  flex-grow: 3;
   text-decoration: none;
   color: black;
   padding: 1rem;
@@ -382,7 +311,7 @@ h1 {
 
 @media screen and (min-width: 450px) {
   .item {
-    flex-basis: 50%;
+    flex-basis: 33%;
     max-width: 50%;
   }
 
@@ -391,14 +320,11 @@ h1 {
 @media screen and (min-width: 650px) {
   .item {
     flex-basis: 33%;
-    max-width: 33%;
+    max-width: 50%;
   }
 
 }
 
-.item:hover img {
-  transform: scale(1.05);
-}
 
 figure {
   background: white;
@@ -436,7 +362,90 @@ figure img {
 
 figure img:hover {
   background-color: rgba(170, 167, 170, 0.8);
+  transform: scale(1.05);
 }
+
+/* ABOUT */
+
+.about {
+  background-color: rgba(90, 97, 117, .1);
+  position: absolute;
+  margin: -1em;
+  font-size: 4rem;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.about-content span {
+  line-height: 20px;
+}
+
+.about-section h3 {
+  padding-top: 2em;
+}
+
+.about-section .icons-grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+  /* display: grid;
+  max-width: 640px;
+  grid-template-rows: repeat(8, 1fr);
+  grid-auto-rows: minmax(60px, auto);
+  grid-row-gap: 1em;
+  grid-column-gap: 1em; */
+  /* margin: auto; */
+  /* padding-left: 20px;
+  padding-right: 30px; */
+}
+
+
+.about-section .center-column .icon:before {
+  text-align: center;
+}
+
+.about-section .center-column .icon {
+  font-size: 55px;
+  color: #DAA25A;
+  padding: 3px;
+
+}
+
+
+/* CONTACT */
+.contact-section .center-column {
+
+}
+
+.contact-section .center-column h1 {
+
+}
+
+.contact-links {
+  max-height: 100px;
+}
+
+/* #github a:hover path {
+  fill: #0000;
+} */
+
+.contact-links a:hover path {
+  opacity: .8;
+}
+
+/* .contact-links a:hover path {
+  fill: #ffffff;
+} */
+
+.contact-links a {
+  text-decoration: none;
+}
+
 
 /* FOOTER */
 .footer {
