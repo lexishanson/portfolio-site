@@ -107,7 +107,7 @@ h1 {
   color: rgba(0, 0, 0, 0.8);
 }
 
-.active-class {
+.active-class:not(.title) {
   color: rgba(0, 0, 0, 0.6);
   background-color: rgba(3, 8, 28, 0.1);
 }
@@ -126,13 +126,16 @@ h1 {
 
 .header {
   font-size: 1.2rem;
-  position: absolute;
-  top: calc(100vh - 6rem);
+  margin-top: calc(100vh - 6rem);
+  margin-bottom: 2rem;
   width: 100%;
   z-index: 1;
 }
+
 .header-inner {
   display: flex;
+  max-width: 800px;
+  margin: 0 auto;
   justify-content: center;
 }
 
@@ -145,20 +148,19 @@ h1 {
   display: none;
   flex-shrink: 0;
   color: #3945a2;
+  color: black;
 }
 
 .lex-page-link {
   padding: 0 1em;
   overflow: hidden;
   font-weight: 400;
-  /* font-size: 1.2rem; */
   color: rgba(0, 0, 0, 0.5);
-  /* color: rgba(89, 71, 121, 1); */
 }
 
 .header.stuck-to-top {
   background-color: white;
-  top: 0;
+  margin-top: 0;
   font-size: 1rem;
   position: fixed;
   z-index: 1;
@@ -168,9 +170,6 @@ h1 {
 .header.stuck-to-top .header-inner {
   justify-content: flex-end;
 }
-/* .header.stuck-to-top .btn {
-  align-self: flex-end;
-} */
 
 .header.stuck-to-top .title {
   margin-left: 1rem;
@@ -178,6 +177,31 @@ h1 {
   flex-grow: 1;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+.header.hamburger .header-inner {
+  flex-wrap: wrap;
+}
+
+.menu-toggle {
+  position: absolute;
+  display: none;
+}
+
+.header.hamburger.stuck-to-top .menu-toggle {
+  display: block;
+}
+
+.header.hamburger .header-inner .lex-page-link {
+  flex-basis: 100%;
+}
+
+.header.hamburger.stuck-to-top .header-inner .lex-page-link {
+  display: none;
+}
+
+.header.hamburger.is-open .header-inner .lex-page-link {
+  display: block;
 }
 
 /* TOP SECTION */
@@ -448,20 +472,21 @@ figure img:hover {
 
 
 /* FOOTER */
-.footer {
-  /* align-self: flex-end; */
-  /* background: rgba(0,0,0,0.8); */
-  color: white;
-  /* margin-top: -100%; */
+.footer-container {
+  position: relative;
+  height: 0;
   width: 100%;
-  position:absolute;
+}
+.footer {
+  color: white;
+  left: 0;
+  width: 100%;
+  position: absolute;
   bottom: 0;
 }
 .footer .center-column {
-  /* line-height: 4rem; */
   margin-bottom: 1rem;
   padding: .5rem;
   text-align: center;
-  /* display: flex; */
   justify-content: center;
 }

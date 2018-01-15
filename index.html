@@ -15,33 +15,11 @@
   </head>
 
 <body>
-  <div>
-    <div class="header" id="header">
-      <div class="header-inner">
-        <div
-          id="top-link"
-          class="header-item title color-7"
-        >Lexis Hanson</div>
-        <div
-          id="projects-link"
-          class="header-item lex-page-link lex-hoverable"
-        >Projects</div>
-        <div
-          id="about-link"
-          class="header-item lex-page-link lex-hoverable"
-        >About</div>
-        <div
-          id="contact-link"
-          class="header-item lex-page-link lex-hoverable"
-        >Contact</div>
-        <div class="header-item lex-page-link resume">Resume</div>
-      </div>
-    </div>
-  </div>
   <div id="top-section" class="section top-section">
     <div id="particles-js"></div>
     <script src="particles.js"></script>
     <div class="top-section-title color-7">Lexis Hanson</div>
+
       <div class="hero-content color-6">
         <div class="hero-image-contianer">
           <img src="./assets/lexis.jpg"/>
@@ -51,7 +29,45 @@
         </h2>
       </div>
 
-     <!-- <p>TOP SECTION</p> -->
+      <div class="header" id="header">
+        <div class="header-inner">
+          <div
+            id="top-link"
+            class="header-item title color-7"
+          >
+            Lexis Hanson
+          </div>
+          <div
+            id="projects-link"
+            class="header-item lex-page-link lex-hoverable"
+          >
+            Projects
+          </div>
+          <div
+            id="about-link"
+            class="header-item lex-page-link lex-hoverable"
+          >
+            About
+          </div>
+          <div
+            id="contact-link"
+            class="header-item lex-page-link lex-hoverable"
+          >
+            Contact
+          </div>
+          <div class="header-item lex-page-link resume">
+            Resume
+          </div>
+          <div
+            id="menu-toggle"
+            class="header-item menu-toggle"
+          >
+            Toggle
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
   <div
     id="projects-section"
@@ -160,10 +176,11 @@
                 </div>
               </div>
           </span>
-
         </div>
+      </div>
     </div>
   </div>
+
   <div
     id="contact-section"
     class="section contact-section"
@@ -204,21 +221,66 @@
       </div>
     </div>
   </div>
-  <div class="footer background-7">
-    <div class="center-column">
-      © Lexis Hanson 2017
+  <div class="footer-container">
+    <div class="footer background-7">
+      <div class="center-column">
+        © Lexis Hanson 2017
+      </div>
     </div>
   </div>
 
     <script type="text/javascript">
-const scrollIt = element =>
+let HEADER_HEIGHT = 100;
+console.log('moop');
+let HEADER_ELEMENT = document.getElementById('header');
+console.log('header el', HEADER_ELEMENT);
+let MENU_OPEN;
+
+/* HAMBURGER MENU */
+
+const closeMenu = () => {
+  HEADER_ELEMENT.classList.remove('is-open');
+  MENU_OPEN = false;
+};
+
+const openMenu = () => {
+  HEADER_ELEMENT.classList.add('is-open');
+  MENU_OPEN = true;
+}
+
+const toggleMenu = () => 
+  MENU_OPEN ? closeMenu() : openMenu();
+
+document.getElementById('menu-toggle')
+  .addEventListener('click', toggleMenu);
+
+const onResize = () => { 
+  if (window.innerWidth < 600) {
+    HEADER_ELEMENT.classList.add('hamburger');
+  } else {
+    HEADER_ELEMENT.classList.remove('hamburger');
+  }
+  if (MENU_OPEN) {
+    toggleMenu();
+  }
+};
+onResize();
+window.onresize = onResize;
+
+
+/* SCROLL */
+
+const scrollIt = e => {
+  closeMenu();
   window.scrollTo({
     behavior: 'smooth',
     left: 0,
-    top: element.offsetTop
+    top: e.offsetTop
   });
+};
 
 const addScrollTo = linkAndSection => {
+  console.log('linkAndSection', linkAndSection);
   linkAndSection.link.addEventListener('click', () =>
     scrollIt(linkAndSection.section)
   );
@@ -232,29 +294,27 @@ const sectionsAndLinks = ['top', 'projects', 'about', 'contact'].map(
 );
 
 sectionsAndLinks.forEach(addScrollTo);
+console.log('sectionsAndLinks', sectionsAndLinks);
 
 const hightlightOnScreenLink = () => {
-  sectionsAndLinks.forEach(sectionAndLink => {
-    const elTop = sectionAndLink.section.offsetTop;
-    console.log(sectionAndLink);
-    const isOnScreen =
-      elTop >= window.pageYOffset &&
-      elTop < window.pageYOffset + window.innerHeight;
-    // const isStuck = [...sectionAndLink.link.parentNode.parentNode.classList].includes("stuck-to-top");
-    if (isOnScreen) {
-      sectionAndLink.link.classList.add('active-class');
-    } else {
-      sectionAndLink.link.classList.remove('active-class');
+  let closestElementAbove = undefined;
+  let lastClosestHeight = undefined;
+  sectionsAndLinks.forEach((sectionAndLink, i) => {
+    const topOffset = sectionAndLink.section.offsetTop - window.pageYOffset;
+    if (i === 0 || topOffset <= 0 && topOffset >= lastClosestHeight) {
+      lastClosestHeight = topOffset;
+      closestElementAbove = sectionAndLink;
     }
+    sectionAndLink.link.classList.remove('active-class');
   });
+  closestElementAbove.link.classList.add('active-class');
 };
 
-const headerElement = document.getElementById('header');
 const toggleHeaderFixed = () => {
-  if (window.innerHeight < window.pageYOffset + 100) {
-    headerElement.classList.add('stuck-to-top');
+  if (window.innerHeight < window.pageYOffset + HEADER_HEIGHT) {
+    HEADER_ELEMENT.classList.add('stuck-to-top');
   } else {
-    headerElement.classList.remove('stuck-to-top');
+    HEADER_ELEMENT.classList.remove('stuck-to-top');
   }
 };
 
@@ -262,8 +322,10 @@ const onScroll = () => {
   toggleHeaderFixed();
   hightlightOnScreenLink();
 };
-
+onScroll();
 document.addEventListener('scroll', onScroll);
+
+/* PORTFOLIO PROJECTS */
 
 const onMouseOver = e => {
   const projectImg = e.target;
