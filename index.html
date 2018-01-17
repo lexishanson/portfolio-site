@@ -62,7 +62,13 @@
             id="menu-toggle"
             class="header-item menu-toggle"
           >
-            Toggle
+            <svg style="width:34px;height:34px" viewBox="0 0 24 24">
+                <path fill="#000000" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+            </svg>
+
+            <svg style="width:34px;height:34px;display:none;" viewBox="0 0 24 24">
+              <path fill="#000000" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+            </svg>
           </div>
         </div>
       </div>
@@ -80,13 +86,13 @@
           <div class="item">
             <figure>
               <img src="./assets/dsr.png" id="proj-img" alt="" />
-              <figcaption>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut labore et dolore magna aliqua
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut labore et dolore magna aliqua
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut labore et dolore magna aliqua
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut labore et dolore magna aliqua
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut labore et dolore magna aliqua
+              <figcaption white-space="pre">
+                Open-source, React implementation of the Salesforce Lightning Design System.
+
+                I've built many components from scratch for this project, in addition to fixing issues. The philosophy of this project is to keep the code design-system-compliant and accessible. We must also balance this with the goals of developers to make these components configurable and easy to use.
+
+                Stack:
+                Javascript, React, Salesfore Lighting Design System, CSS, Enzyme, Chai, Mocha.
               </figcaption>
             </figure>
           </div>
@@ -240,11 +246,19 @@ let MENU_OPEN;
 const closeMenu = () => {
   HEADER_ELEMENT.classList.remove('is-open');
   MENU_OPEN = false;
+  const hamburgerIcon = document.querySelectorAll('.menu-toggle svg')[0];
+  const closeIcon = document.querySelectorAll('.menu-toggle svg')[1];
+  closeIcon.style.display = 'none';
+  hamburgerIcon.style.display = 'block';
 };
 
 const openMenu = () => {
   HEADER_ELEMENT.classList.add('is-open');
   MENU_OPEN = true;
+  const hamburgerIcon = document.querySelectorAll('.menu-toggle svg')[0];
+  const closeIcon = document.querySelectorAll('.menu-toggle svg')[1];
+  closeIcon.style.display = 'block';
+  hamburgerIcon.style.display = 'none';
 };
 
 const toggleMenu = () => (MENU_OPEN ? closeMenu() : openMenu());
