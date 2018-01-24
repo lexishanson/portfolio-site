@@ -21,7 +21,7 @@
   <div id="top-section" class="section top-section">
     <div class="top-section-title color-7">Lexis Hanson</div>
     <img id="hero-img" src="./assets/lexis.jpg"/>
-    <h2 class="hero-h2 color-2">
+    <h2 class="hero-h2 color-7">
       Hey there 👋 welcome to my site.
     </h2>
 
@@ -53,7 +53,14 @@
             Contact
           </div>
           <div class="header-item lex-page-link resume">
-            <a id="resume" href="https://drive.google.com/file/d/15rCjqbdI2tbyw74q6QKNedkf7Yg8jXZw/view?usp=sharing" target="blank" style="text-decoration:none;color:inherit">
+            <a
+              id="resume"
+              href="https://drive.google.com/file/d/15rCjqbdI2tbyw74q6QKNedkf7Yg8jXZw/view?usp=sharing"
+              target="blank"
+              style="text-decoration:none;color:inherit"
+              onMouseOut="this.style.color='rgba(90, 97, 117, 1)'"
+              onMouseOver="this.style.color='rgba(90, 97, 117, .7)'"
+            >
               Resume
             </a>
           </div>
@@ -62,11 +69,11 @@
             class="header-item menu-toggle"
           >
             <svg style="width:34px;height:34px" viewBox="0 0 24 24">
-                <path fill="#000000" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+                <path fill="#5A6175" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
             </svg>
 
             <svg style="width:34px;height:34px;display:none;" viewBox="0 0 24 24">
-              <path fill="#000000" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+              <path fill="#5A6175" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
             </svg>
           </div>
         </div>
@@ -83,32 +90,42 @@
         <div class="item-parent">
           <div class="item">
             <figure>
-              <img src="./assets/dsr.png" id="proj-img" alt="" />
+              <div>
+                <img src="./assets/DSR-wide copy.png" id="proj-img" alt="" />
+              </div>
               <figcaption white-space="pre">
+                <h2>Design System React</h2>
                 Open-source, React implementation of the Salesforce Lightning Design System.
 
-                I've built many components from scratch for this project, in addition to fixing issues. The philosophy of this project is to keep the code design-system-compliant and accessible. We must also balance this with the goals of developers to make these components configurable and easy to use.
+                I've built components from scratch for this project, in addition to fixing issues. The philosophy of this project is to keep the code design-system-compliant and accessible. We must also balance this with the goals of developers to make these components configurable and easy to use.
 
                 Stack:
                 Javascript, React, Salesfore Lighting Design System, CSS, Enzyme, Chai, Mocha.
+
+                <button>View on GitHub</button>
               </figcaption>
             </figure>
           </div>
           <div class="item">
             <figure>
-              <img src="./assets/cryptoprices.svg" id="proj-img" alt="">
-              <figcaption>
+              <div>
+                <img src="./assets/cryptoprices.png" id="proj-img" alt="">
+              </div>
+              <figcaption white-space="pre">
+                <h2>CryptoPrices</h2>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut labore et dolore magna aliqua
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut labore et dolore magna aliqua
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut labore et dolore magna aliqua
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut labore et dolore magna aliqua
-
+                <button>Open App Page</button>
               </figcaption>
             </figure>
           </div>
           <div class="item" id="proj-img">
             <figure>
-              <div></div>
+              <div>
+                <img src="./assets/weather5.png" id="proj-img" alt="">
+              </div>
               <figcaption>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut labore et dolore magna aliqua
               </figcaption>
@@ -116,7 +133,9 @@
           </div>
           <div class="item">
             <figure>
-              <img src="./assets/dsr.png" id="proj-img" alt="">
+              <div>
+                <img src="./assets/dsr.png" id="proj-img" alt="">
+              </div>
               <figcaption>
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               </figcaption>
@@ -159,7 +178,9 @@
               <i class="icon devicon-mocha-plain"></i>
               <i class="icon devicon-bitbucket-plain-wordmark"></i>
             </div>
-              <p>Redux, NPM, Chai, Enzyme, Salesforce, functional propgramming</p>
+              <p></p>
+              <p>Other Skills:</p>
+              <p>Redux, NPM, Firebase, Chai, Enzyme, Salesforce, functional propgramming</p>
             <h3>Other Musings</h3>
               <div class="interests">
                 <div class="interests-item">
@@ -177,7 +198,7 @@
                 <div class="interests-item">
                   <b>Podcast Junkie</b>
                   <div>
-                    I'm known to join into conversations with,"Oh yeah, I was listening to a podcast about that..." If you're looking for a starter episode, check out this one on CRISPR by Radio Lab.
+                    I'm known to start conversations with,"Oh yeah, I was listening to a podcast about that..." If you're looking for a starter episode, check out this one on CRISPR by Radio Lab.
                   </div>
                 </div>
               </div>
@@ -335,23 +356,24 @@ document.addEventListener('scroll', onScroll);
 
 /* PORTFOLIO PROJECTS */
 
-const onMouseOver = e => {
-  const projectImg = e.target;
-  projectImg.src = './assets/dsr0.png';
-};
-
-const onMouseOut = e => {
-  const projectImg = e.target;
-  projectImg.src = './assets/dsr.png';
-};
-
-document
-  .getElementById('proj-img')
-  .addEventListener('mouseover', e => onMouseOver(e));
-
-document
-  .getElementById('proj-img')
-  .addEventListener('mouseleave', e => onMouseOut(e));
+// probably delete....
+// const onMouseOver = e => {
+//   const projectImg = e.target;
+//   projectImg.src = './assets/dsr0.png';
+// };
+//
+// const onMouseOut = e => {
+//   const projectImg = e.target;
+//   projectImg.src = './assets/dsr.png';
+// };
+//
+// document
+//   .getElementById('proj-img')
+//   .addEventListener('mouseover', e => onMouseOver(e));
+//
+// document
+//   .getElementById('proj-img')
+//   .addEventListener('mouseleave', e => onMouseOut(e));
 
 particlesJS.load('particles-js', 'assets/particles-config.json', function() {
   console.log('callback - particles.js config loaded');
