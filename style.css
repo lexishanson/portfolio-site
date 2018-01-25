@@ -640,9 +640,9 @@ figure img:hover {
     display: grid;
     grid-template-rows: repeat(autofit, minMax(200px, 1fr));
     grid-template-columns: minmax(150px, 400px);
-    grid-row-gap: 1em;
-    grid-column-gap: 1em;
-    */: 15px;
+    grid-row-gap: 2em;
+
+
   }
 
   .item {
