@@ -24,8 +24,6 @@
     <h2 class="hero-h2 color-7">
       Hey there 👋 welcome to my site.
     </h2>
-
-
       <div class="header" id="header">
         <div class="header-inner">
           <div
@@ -91,33 +89,41 @@
           <div class="item">
             <figure>
               <div>
-                <img src="./assets/DSR-wide copy.png" id="proj-img" alt="" />
+                <img src="./assets/DSR-wide.png" id="proj-img" alt="" />
               </div>
               <figcaption white-space="pre">
                 <h2>Design System React</h2>
-                Open-source, React implementation of the Salesforce Lightning Design System.
+                Design System React is an open-source, React implementation of the Salesforce Lightning Design System.
 
-                I've built components from scratch for this project, in addition to fixing issues. The philosophy of this project is to keep the code design-system-compliant and accessible. We must also balance this with the goals of developers to make these components configurable and easy to use.
+                I've built components from scratch for this Design System React, in addition to fixing issues, writing unit tests, and defining documentation. The philosophy of this project is to keep the code compliant with Salesforce's Lightning Design System. We must also balance this with the goals of developers to make these components configurable and easy to use.
 
-                Stack:
-                Javascript, React, Salesfore Lighting Design System, CSS, Enzyme, Chai, Mocha.
-
-                <button>View on GitHub</button>
+                Built with: Javascript, React, CSS, Enzyme, Chai, and Mocha.
+                <div class="project-links">
+                  <a href="https://github.com/salesforce/design-system-react" alt="Design System React" title="Github" target="blank">
+                    <img src="./assets/github-inline.png" style="display:in-line;width:2rem;height:2rem;"/></a>
+                </div>
               </figcaption>
             </figure>
           </div>
           <div class="item">
             <figure>
               <div>
-                <img src="./assets/cryptoprices.png" id="proj-img" alt="">
+                <img src="./assets/cryptoprices.png" id="proj-img" alt="CryptoPrices">
               </div>
               <figcaption white-space="pre">
                 <h2>CryptoPrices</h2>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut labore et dolore magna aliqua
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut labore et dolore magna aliqua
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut labore et dolore magna aliqua
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut labore et dolore magna aliqua
-                <button>Open App Page</button>
+                CryptoPrices provides real-time cryptocurrency prices in a voice-enabled interface, on Google Home devices and on the Google Assistant iOS/Android app.
+
+                Users can request the price of a cryptocurrency in terms of a fiat (traditional) currency or another cryptocurrency.
+                This app was published with Actions on Google and granted a "Gaining Traction" award from Google, with 60k monthly invocations at the time of the milestone.
+
+                Built with: Javascript, Node, Firebase, Google Cloud Functions, Dialogflow (NLP), and CryptoCompare API.
+                <div class="project-links">
+                  <a href="https://www.github.com" alt="CryptoPrices" title="Github" target="blank">
+                    <img src="./assets/github-inline.png" style="width:2rem;height:2rem;w"/></a>
+                  <a href="https://assistant.google.com/services/a/uid/00000020df028049?hl=en" alt="CryptoPrices" title="Action on Google Store" target="blank">
+                    <img src="./assets/google-assistant.png" style="width:2rem;height:2rem;"/></a>
+                </div>
               </figcaption>
             </figure>
           </div>
@@ -127,6 +133,7 @@
                 <img src="./assets/weather5.png" id="proj-img" alt="">
               </div>
               <figcaption>
+                <h2>Weather Trends</h2>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut labore et dolore magna aliqua
               </figcaption>
             </figure>
@@ -134,9 +141,10 @@
           <div class="item">
             <figure>
               <div>
-                <img src="./assets/dsr.png" id="proj-img" alt="">
+                <img src="./assets/weather4.png" id="proj-img" alt="">
               </div>
               <figcaption>
+                <h2>Weather Trends</h2>
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               </figcaption>
             </figure>
@@ -301,6 +309,7 @@ window.onresize = onResize;
 
 const scrollIt = e => {
   closeMenu();
+  console.log('offset', e.offsetTop);
   window.scrollTo({
     behavior: 'smooth',
     left: 0,
@@ -329,7 +338,7 @@ const hightlightOnScreenLink = () => {
   let closestElementAbove = undefined;
   let lastClosestHeight = undefined;
   sectionsAndLinks.forEach((sectionAndLink, i) => {
-    const topOffset = sectionAndLink.section.offsetTop - window.pageYOffset;
+    const topOffset = (sectionAndLink.section.offsetTop - 50) - window.pageYOffset;
     if (i === 0 || (topOffset <= 0 && topOffset >= lastClosestHeight)) {
       lastClosestHeight = topOffset;
       closestElementAbove = sectionAndLink;
@@ -354,26 +363,6 @@ const onScroll = () => {
 onScroll();
 document.addEventListener('scroll', onScroll);
 
-/* PORTFOLIO PROJECTS */
-
-// probably delete....
-// const onMouseOver = e => {
-//   const projectImg = e.target;
-//   projectImg.src = './assets/dsr0.png';
-// };
-//
-// const onMouseOut = e => {
-//   const projectImg = e.target;
-//   projectImg.src = './assets/dsr.png';
-// };
-//
-// document
-//   .getElementById('proj-img')
-//   .addEventListener('mouseover', e => onMouseOver(e));
-//
-// document
-//   .getElementById('proj-img')
-//   .addEventListener('mouseleave', e => onMouseOut(e));
 
 particlesJS.load('particles-js', 'assets/particles-config.json', function() {
   console.log('callback - particles.js config loaded');
