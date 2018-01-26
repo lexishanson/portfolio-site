@@ -1,4 +1,4 @@
-<!DOCTYPE html />
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title class="color-7">Lexis Hanson</title>
@@ -8,15 +8,12 @@
     <meta name="author" content="Lexis Hanson">
     <script src="https://d3js.org/d3.v4.js"></script>
     <link rel="shortcut icon" href="favicon.png">
-    <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,100,300,500,800" rel="stylesheet" type="text/css"> -->
-    <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"> -->
-    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link rel="stylesheet" href="./style.css">
   </head>
 
 <body>
   <div id="particles-js">
-    <script src="particles.js"></script>
   </div>
   <div id="top-section" class="section top-section">
     <div class="top-section-title color-7">Lexis Hanson</div>
@@ -66,11 +63,11 @@
             id="menu-toggle"
             class="header-item menu-toggle"
           >
-            <svg style="width:34px;height:34px" viewBox="0 0 24 24">
+            <svg style="width:34px;height:34px;margin-right:1rem;" viewBox="0 0 24 24">
                 <path fill="#5A6175" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
             </svg>
 
-            <svg style="width:34px;height:34px;display:none;" viewBox="0 0 24 24">
+            <svg style="width:34px;height:34px;display:none;margin-right:1rem;" viewBox="0 0 24 24">
               <path fill="#5A6175" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
             </svg>
           </div>
@@ -161,7 +158,7 @@
                 <h2>CoffeeIQ</h2>
                 CoffeeIQ is a simple app that schedules a coffee break with a new coworker each week. It regularly pairs up team members who don’t know each other well, to spread trust and collaboration across a company.
 
-                This project was a collaborative effort and my contributions were around building components and building routes.
+                This project was a collaborative effort and my contributions were around building components and routes.
 
                 Built with: React, Redux, React Router, and Firebase.
                 <div class="project-links">
@@ -209,27 +206,20 @@
               <i class="icon devicon-confluence-plain-wordmark"></i>
             </div>
               <p></p>
-              <p>Other Skills:</p>
-              <p>Redux, NPM, Firebase, Chai, Enzyme, Salesforce.com, functional propgramming</p>
+              <p>Other skills: Redux, NPM, Firebase, Chai, Enzyme, Salesforce.com, functional propgramming</p>
             <h3>Other Musings</h3>
               <div class="interests">
                 <div class="interests-item">
-                  <b>Investing Buff</b>
-                  <div>
+                  <h4>Investing Buff</h4>
                     I bought my first on my 18th birthday. Compound intest is a miracle of life. As soon as I turn off my alarm in the morning, I open my Robinhood app to see how the market opened.
-                  </div>
                 </div>
                 <div class="interests-item">
-                  <b>Blockchain Enthusiast</b>
-                  <div>
-                    I'm fascinated by blockchain technology and the economic potential of smart contracts. I invest in cryptocurrencies and stay current on new blockchain protocol developments.
-                  </div>
+                  <h4>Blockchain Enthusiast</h4>
+                  I'm fascinated by blockchain technology and the economic potential of smart contracts. I invest in cryptocurrencies and stay current on new blockchain protocol developments.
                 </div>
                 <div class="interests-item">
-                  <b>Podcast Junkie</b>
-                  <div>
-                    I'm known to start conversations with,"Oh yeah, I was listening to a podcast about that..." If you're looking for a starter episode, check out this one on CRISPR by Radio Lab.
-                  </div>
+                  <h4>Podcast Junkie</h4>
+                  I'm known to start conversations with,"Oh yeah, I was listening to a podcast about that..." If you're looking for a starter episode, check out this one on CRISPR by Radio Lab.
                 </div>
               </div>
           </span>
@@ -282,115 +272,115 @@
       </div>
     </div>
   </div>
-
+    <script src="particles.js"></script>
     <script type="text/javascript">
-let HEADER_HEIGHT = 100;
-console.log('moop');
-let HEADER_ELEMENT = document.getElementById('header');
-console.log('header el', HEADER_ELEMENT);
-let MENU_OPEN;
+      let HEADER_HEIGHT = 100;
+      console.log('moop');
+      let HEADER_ELEMENT = document.getElementById('header');
+      console.log('header el', HEADER_ELEMENT);
+      let MENU_OPEN;
 
-/* HAMBURGER MENU */
+      /* HAMBURGER MENU */
 
-const closeMenu = () => {
-  HEADER_ELEMENT.classList.remove('is-open');
-  MENU_OPEN = false;
-  const hamburgerIcon = document.querySelectorAll('.menu-toggle svg')[0];
-  const closeIcon = document.querySelectorAll('.menu-toggle svg')[1];
-  closeIcon.style.display = 'none';
-  hamburgerIcon.style.display = 'block';
-};
+      const closeMenu = () => {
+        HEADER_ELEMENT.classList.remove('is-open');
+        MENU_OPEN = false;
+        const hamburgerIcon = document.querySelectorAll('.menu-toggle svg')[0];
+        const closeIcon = document.querySelectorAll('.menu-toggle svg')[1];
+        closeIcon.style.display = 'none';
+        hamburgerIcon.style.display = 'block';
+      };
 
-const openMenu = () => {
-  HEADER_ELEMENT.classList.add('is-open');
-  MENU_OPEN = true;
-  const hamburgerIcon = document.querySelectorAll('.menu-toggle svg')[0];
-  const closeIcon = document.querySelectorAll('.menu-toggle svg')[1];
-  closeIcon.style.display = 'block';
-  hamburgerIcon.style.display = 'none';
-};
+      const openMenu = () => {
+        HEADER_ELEMENT.classList.add('is-open');
+        MENU_OPEN = true;
+        const hamburgerIcon = document.querySelectorAll('.menu-toggle svg')[0];
+        const closeIcon = document.querySelectorAll('.menu-toggle svg')[1];
+        closeIcon.style.display = 'block';
+        hamburgerIcon.style.display = 'none';
+      };
 
-const toggleMenu = () => (MENU_OPEN ? closeMenu() : openMenu());
+      const toggleMenu = () => (MENU_OPEN ? closeMenu() : openMenu());
 
-document.getElementById('menu-toggle').addEventListener('click', toggleMenu);
+      document.getElementById('menu-toggle').addEventListener('click', toggleMenu);
 
-const onResize = () => {
-  if (window.innerWidth < 600) {
-    HEADER_ELEMENT.classList.add('hamburger');
-  } else {
-    HEADER_ELEMENT.classList.remove('hamburger');
-  }
-  if (MENU_OPEN) {
-    toggleMenu();
-  }
-};
-onResize();
-window.onresize = onResize;
+      const onResize = () => {
+        if (window.innerWidth < 600) {
+          HEADER_ELEMENT.classList.add('hamburger');
+        } else {
+          HEADER_ELEMENT.classList.remove('hamburger');
+        }
+        if (MENU_OPEN) {
+          toggleMenu();
+        }
+      };
+      onResize();
+      window.onresize = onResize;
 
-/* SCROLL */
+      /* SCROLL */
 
-const scrollIt = e => {
-  closeMenu();
-  console.log('offset', e.offsetTop);
-  window.scrollTo({
-    behavior: 'smooth',
-    left: 0,
-    top: e.offsetTop
-  });
-};
+      const scrollIt = e => {
+        closeMenu();
+        console.log('offset', e.offsetTop);
+        window.scrollTo({
+          behavior: 'smooth',
+          left: 0,
+          top: e.offsetTop
+        });
+      };
 
-const addScrollTo = linkAndSection => {
-  console.log('linkAndSection', linkAndSection);
-  linkAndSection.link.addEventListener('click', () =>
-    scrollIt(linkAndSection.section)
-  );
-};
+      const addScrollTo = linkAndSection => {
+        console.log('linkAndSection', linkAndSection);
+        linkAndSection.link.addEventListener('click', () =>
+          scrollIt(linkAndSection.section)
+        );
+      };
 
-const sectionsAndLinks = ['top', 'projects', 'about', 'contact'].map(
-  linkName => ({
-    section: document.getElementById(`${linkName}-section`),
-    link: document.getElementById(`${linkName}-link`)
-  })
-);
+      const sectionsAndLinks = ['top', 'projects', 'about', 'contact'].map(
+        linkName => ({
+          section: document.getElementById(`${linkName}-section`),
+          link: document.getElementById(`${linkName}-link`)
+        })
+      );
 
-sectionsAndLinks.forEach(addScrollTo);
-console.log('sectionsAndLinks', sectionsAndLinks);
+      sectionsAndLinks.forEach(addScrollTo);
+      console.log('sectionsAndLinks', sectionsAndLinks);
 
-const hightlightOnScreenLink = () => {
-  let closestElementAbove = undefined;
-  let lastClosestHeight = undefined;
-  sectionsAndLinks.forEach((sectionAndLink, i) => {
-    const topOffset = (sectionAndLink.section.offsetTop - 50) - window.pageYOffset;
-    if (i === 0 || (topOffset <= 0 && topOffset >= lastClosestHeight)) {
-      lastClosestHeight = topOffset;
-      closestElementAbove = sectionAndLink;
-    }
-    sectionAndLink.link.classList.remove('active-class');
-  });
-  closestElementAbove.link.classList.add('active-class');
-};
+      const hightlightOnScreenLink = () => {
+        let closestElementAbove = undefined;
+        let lastClosestHeight = undefined;
+        sectionsAndLinks.forEach((sectionAndLink, i) => {
+          const topOffset = (sectionAndLink.section.offsetTop - 50) - window.pageYOffset;
+          if (i === 0 || (topOffset <= 50 && topOffset >= lastClosestHeight)) {
+            lastClosestHeight = topOffset;
+            closestElementAbove = sectionAndLink;
+          }
+          sectionAndLink.link.classList.remove('active-class');
+        });
+        closestElementAbove.link.classList.add('active-class');
+      };
 
-const toggleHeaderFixed = () => {
-  if (window.innerHeight < window.pageYOffset + HEADER_HEIGHT) {
-    HEADER_ELEMENT.classList.add('stuck-to-top');
-  } else {
-    HEADER_ELEMENT.classList.remove('stuck-to-top');
-  }
-};
+      const toggleHeaderFixed = () => {
+        if (window.innerHeight < window.pageYOffset + HEADER_HEIGHT) {
+          HEADER_ELEMENT.classList.add('stuck-to-top');
+        } else {
+          HEADER_ELEMENT.classList.remove('stuck-to-top');
+        }
+      };
 
-const onScroll = () => {
-  toggleHeaderFixed();
-  hightlightOnScreenLink();
-};
-onScroll();
-document.addEventListener('scroll', onScroll);
+      const onScroll = () => {
+        toggleHeaderFixed();
+        hightlightOnScreenLink();
+      };
+      onScroll();
+      document.addEventListener('scroll', onScroll);
 
 
-particlesJS.load('particles-js', 'assets/particles-config.json', function() {
-  console.log('callback - particles.js config loaded');
-});
+      particlesJS.load('particles-js', 'assets/particles-config.json', function() {
+        console.log('callback - particles.js config loaded');
+      });
 
-// TODO: add Google analytics
-</script>
-</body>
+      // TODO: add Google analytics
+    </script>
+  </body>
 </html>

@@ -1,16 +1,12 @@
 {
   "hosting": {
     "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [
+    "headers": [
       {
-        "source": "**",
-        "destination": "/index.html"
+        "source": "**/*.@(css|html|js|map|otf|png|svg|jpg)",
+        "headers": [{ "key": "Cache-Control", "value": "max-age=3600" }]
       }
-    ]
+    ],
+    "rewrites": [{ "source": "**", "destination": "/index.html" }]
   }
 }
