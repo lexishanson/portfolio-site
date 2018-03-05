@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71204511-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+function gtag() {
+  dataLayer.push(arguments);
+}
+gtag('js', new Date());
+
+gtag('config', 'UA-71204511-1');
+</script>
+
     <title class="color-7">Lexis Hanson</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <meta name="description" content="Lexis is cool, perhaps you can become cool by association.">
+    <meta name="description" content="I'm a software engineer open to chatting about new work opportunities. You can also ask me about personal finance, podcast recommendations, or best running routes in San Francisco.">
     <meta name="author" content="Lexis Hanson">
     <script src="https://d3js.org/d3.v4.js"></script>
-    <link rel="shortcut icon" href="favicon.png">
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon"/>
+    <link rel="icon" href="/assets/favicon.png" type="image/ico"/>
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel="stylesheet" href="./style.css">
   </head>
@@ -17,7 +30,7 @@
   </div>
   <div id="top-section" class="section top-section">
     <div class="top-section-title color-7">Lexis Hanson</div>
-    <img id="hero-img" src="./assets/lexis.jpg"/>
+    <img id="hero-img" src="./assets/lexis_bridge2.png"/>
     <h2 class="hero-h2 color-7">
       Hey there 👋 welcome to my site.
     </h2>
@@ -50,7 +63,7 @@
           <div class="header-item lex-page-link resume">
             <a
               id="resume"
-              href="https://drive.google.com/file/d/15rCjqbdI2tbyw74q6QKNedkf7Yg8jXZw/view?usp=sharing"
+              href="https://drive.google.com/file/d/1hx2qBLkU72y2phmGzp2DJ2euc35XtJrB/view?usp=sharing"
               target="blank"
               style="text-decoration:none;color:inherit"
               onMouseOut="this.style.color='rgba(90, 97, 117, 1)'"
@@ -274,113 +287,113 @@
   </div>
     <script src="particles.js"></script>
     <script type="text/javascript">
-      let HEADER_HEIGHT = 100;
-      console.log('moop');
-      let HEADER_ELEMENT = document.getElementById('header');
-      console.log('header el', HEADER_ELEMENT);
-      let MENU_OPEN;
+    let HEADER_HEIGHT = 100;
+console.log('moop');
+let HEADER_ELEMENT = document.getElementById('header');
+console.log('header el', HEADER_ELEMENT);
+let MENU_OPEN;
 
-      /* HAMBURGER MENU */
+/* HAMBURGER MENU */
 
-      const closeMenu = () => {
-        HEADER_ELEMENT.classList.remove('is-open');
-        MENU_OPEN = false;
-        const hamburgerIcon = document.querySelectorAll('.menu-toggle svg')[0];
-        const closeIcon = document.querySelectorAll('.menu-toggle svg')[1];
-        closeIcon.style.display = 'none';
-        hamburgerIcon.style.display = 'block';
-      };
+const closeMenu = () => {
+  HEADER_ELEMENT.classList.remove('is-open');
+  MENU_OPEN = false;
+  const hamburgerIcon = document.querySelectorAll('.menu-toggle svg')[0];
+  const closeIcon = document.querySelectorAll('.menu-toggle svg')[1];
+  closeIcon.style.display = 'none';
+  hamburgerIcon.style.display = 'block';
+};
 
-      const openMenu = () => {
-        HEADER_ELEMENT.classList.add('is-open');
-        MENU_OPEN = true;
-        const hamburgerIcon = document.querySelectorAll('.menu-toggle svg')[0];
-        const closeIcon = document.querySelectorAll('.menu-toggle svg')[1];
-        closeIcon.style.display = 'block';
-        hamburgerIcon.style.display = 'none';
-      };
+const openMenu = () => {
+  HEADER_ELEMENT.classList.add('is-open');
+  MENU_OPEN = true;
+  const hamburgerIcon = document.querySelectorAll('.menu-toggle svg')[0];
+  const closeIcon = document.querySelectorAll('.menu-toggle svg')[1];
+  closeIcon.style.display = 'block';
+  hamburgerIcon.style.display = 'none';
+};
 
-      const toggleMenu = () => (MENU_OPEN ? closeMenu() : openMenu());
+const toggleMenu = () => (MENU_OPEN ? closeMenu() : openMenu());
 
-      document.getElementById('menu-toggle').addEventListener('click', toggleMenu);
+document.getElementById('menu-toggle').addEventListener('click', toggleMenu);
 
-      const onResize = () => {
-        if (window.innerWidth < 600) {
-          HEADER_ELEMENT.classList.add('hamburger');
-        } else {
-          HEADER_ELEMENT.classList.remove('hamburger');
-        }
-        if (MENU_OPEN) {
-          toggleMenu();
-        }
-      };
-      onResize();
-      window.onresize = onResize;
+const onResize = () => {
+  if (window.innerWidth < 600) {
+    HEADER_ELEMENT.classList.add('hamburger');
+  } else {
+    HEADER_ELEMENT.classList.remove('hamburger');
+  }
+  if (MENU_OPEN) {
+    toggleMenu();
+  }
+};
+onResize();
+window.onresize = onResize;
 
-      /* SCROLL */
+/* SCROLL */
 
-      const scrollIt = e => {
-        closeMenu();
-        console.log('offset', e.offsetTop);
-        window.scrollTo({
-          behavior: 'smooth',
-          left: 0,
-          top: e.offsetTop
-        });
-      };
+const scrollIt = e => {
+  closeMenu();
+  console.log('offset', e.offsetTop);
+  window.scrollTo({
+    behavior: 'smooth',
+    left: 0,
+    top: e.offsetTop
+  });
+};
 
-      const addScrollTo = linkAndSection => {
-        console.log('linkAndSection', linkAndSection);
-        linkAndSection.link.addEventListener('click', () =>
-          scrollIt(linkAndSection.section)
-        );
-      };
+const addScrollTo = linkAndSection => {
+  console.log('linkAndSection', linkAndSection);
+  linkAndSection.link.addEventListener('click', () =>
+    scrollIt(linkAndSection.section)
+  );
+};
 
-      const sectionsAndLinks = ['top', 'projects', 'about', 'contact'].map(
-        linkName => ({
-          section: document.getElementById(`${linkName}-section`),
-          link: document.getElementById(`${linkName}-link`)
-        })
-      );
+const sectionsAndLinks = ['top', 'projects', 'about', 'contact'].map(
+  linkName => ({
+    section: document.getElementById(`${linkName}-section`),
+    link: document.getElementById(`${linkName}-link`)
+  })
+);
 
-      sectionsAndLinks.forEach(addScrollTo);
-      console.log('sectionsAndLinks', sectionsAndLinks);
+sectionsAndLinks.forEach(addScrollTo);
+console.log('sectionsAndLinks', sectionsAndLinks);
 
-      const hightlightOnScreenLink = () => {
-        let closestElementAbove = undefined;
-        let lastClosestHeight = undefined;
-        sectionsAndLinks.forEach((sectionAndLink, i) => {
-          const topOffset = (sectionAndLink.section.offsetTop - 50) - window.pageYOffset;
-          if (i === 0 || (topOffset <= 50 && topOffset >= lastClosestHeight)) {
-            lastClosestHeight = topOffset;
-            closestElementAbove = sectionAndLink;
-          }
-          sectionAndLink.link.classList.remove('active-class');
-        });
-        closestElementAbove.link.classList.add('active-class');
-      };
+const hightlightOnScreenLink = () => {
+  let closestElementAbove = undefined;
+  let lastClosestHeight = undefined;
+  sectionsAndLinks.forEach((sectionAndLink, i) => {
+    const topOffset =
+      sectionAndLink.section.offsetTop - 50 - window.pageYOffset;
+    if (i === 0 || (topOffset <= 50 && topOffset >= lastClosestHeight)) {
+      lastClosestHeight = topOffset;
+      closestElementAbove = sectionAndLink;
+    }
+    sectionAndLink.link.classList.remove('active-class');
+  });
+  closestElementAbove.link.classList.add('active-class');
+};
 
-      const toggleHeaderFixed = () => {
-        if (window.innerHeight < window.pageYOffset + HEADER_HEIGHT) {
-          HEADER_ELEMENT.classList.add('stuck-to-top');
-        } else {
-          HEADER_ELEMENT.classList.remove('stuck-to-top');
-        }
-      };
+const toggleHeaderFixed = () => {
+  if (window.innerHeight < window.pageYOffset + HEADER_HEIGHT) {
+    HEADER_ELEMENT.classList.add('stuck-to-top');
+  } else {
+    HEADER_ELEMENT.classList.remove('stuck-to-top');
+  }
+};
 
-      const onScroll = () => {
-        toggleHeaderFixed();
-        hightlightOnScreenLink();
-      };
-      onScroll();
-      document.addEventListener('scroll', onScroll);
+const onScroll = () => {
+  toggleHeaderFixed();
+  hightlightOnScreenLink();
+};
+onScroll();
+document.addEventListener('scroll', onScroll);
 
+particlesJS.load('particles-js', 'assets/particles-config.json', function() {
+  console.log('callback - particles.js config loaded');
+});
 
-      particlesJS.load('particles-js', 'assets/particles-config.json', function() {
-        console.log('callback - particles.js config loaded');
-      });
-
-      // TODO: add Google analytics
-    </script>
+// TODO: add Google analytics
+</script>
   </body>
 </html>
