@@ -178,8 +178,9 @@ h1 {
 }
 
 .lex-page-link {
-  padding: 0 1em;
+  padding: 0 1rem;
   overflow: hidden;
+  font-size: 1.5rem;
   font-weight: 400;
   color: rgba(90, 97, 117, 1);
 }
@@ -204,6 +205,10 @@ h1 {
   font-weight: 600;
   color: rgb(46, 66, 125);
   text-transform: uppercase;
+}
+
+.header.stuck-to-top .lex-page-link {
+  font-size: 1rem;
 }
 
 .header.hamburger .header-inner {
@@ -240,7 +245,7 @@ h1 {
 
 .top-section {
   display: grid;
-  grid-template-rows: 1px minMax(50px, 150px) minmax(250px, 470px) 1fr;
+  grid-template-rows: 1px minMax(50px, 100px) 0.5fr minmax(250px, 400px) 1fr;
   grid-template-columns: 1px 1fr minmax(250px, 500px) 1fr;
   grid-gap: 5px;
   background: linear-gradient(
@@ -252,16 +257,14 @@ h1 {
 
 .top-section-title {
   grid-column: 2 / 4;
-  grid-row: 2 / 3;
-  margin: 3rem 0 0 2rem;
-  top: 0;
-  left: 1rem;
-  font-size: 3.5rem;
+  grid-row: 2 / 4;
+  margin: 75px 0 0 75px;
+  font-size: 4rem;
 }
 
 .hero-content {
   display: flex;
-  grid-row-start: 2;
+  grid-row-start: 3;
   grid-column-start: 3;
   margin-top: 125px;
   border-radius: 1rem;
@@ -281,20 +284,18 @@ h1 {
   margin: auto;
   /* height: calc(100vh - 23rem); */
   border: 5px solid rgba(90, 97, 117, 0.5);
-  grid-row: 3 / 4;
+  grid-row: 4 / 5;
   grid-column: 3 / 4;
-  max-width: 75%;
+  max-width: 55%;
   display: block;
   overflow: hidden;
   border-radius: 100%;
-  margin: auto;
   position: relative;
 }
 
 .hero-h2 {
-  grid-row-start: 4;
+  grid-row-start: 5;
   grid-column-start: 3;
-  padding-top: 60px;
   text-align: center;
 }
 
@@ -438,7 +439,7 @@ figure img:hover {
 
 .about-section .icon {
   font-size: 60px;
-  color: #daa25a;
+  color: rgb(46, 66, 125);
   padding: 3px;
 }
 
@@ -579,7 +580,7 @@ figure img:hover {
 
   .top-section-title {
     grid-column-start: 2;
-    grid-row: 1 / 2;
+    grid-row: 2 / 3;
     position: inherit;
     padding-top: 3rem;
     font-size: 3rem;
@@ -643,7 +644,7 @@ figure img:hover {
 
   .about-section .icon {
     font-size: 40px;
-    color: #daa25a;
+    color: rgb(46, 66, 125);
     padding: 3px;
   }
 }
@@ -651,12 +652,7 @@ figure img:hover {
 @media only screen and (min-width: 767px) and (max-width: 900px) {
   .top-section {
     display: grid;
-    grid-template-rows:
-      1px minmax(50px, 100px) minmax(50px, 100px) minmax(250px, 270px) minmax(
-        150px,
-        200px
-      )
-      1fr 1fr;
+    grid-template-rows: 1px minMax(50px, 100px) 0.5fr minmax(250px, 350px) 1fr;
     grid-template-columns: 1px 1fr minmax(250px, 500px) 1fr;
     grid-gap: 5px;
     background: linear-gradient(
@@ -668,10 +664,8 @@ figure img:hover {
 
   .top-section-title {
     grid-column: 2 / 4;
-    grid-row: 2 / 4;
+    grid-row: 2 / 3;
     margin-top: 5rem;
-    top: 0;
-    left: 1rem;
     font-size: 4rem;
   }
 
@@ -683,18 +677,25 @@ figure img:hover {
     display: block;
     overflow: hidden;
     border-radius: 100%;
-    margin: 25px auto;
+    margin: auto;
     position: relative;
   }
 
   .hero-h2 {
-    grid-row-start: 4;
-    grid-column-start: 2;
-    margin-top: 3rem;
+    grid-row-start: 5;
+    grid-column-start: 3;
   }
   .section {
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
+  }
+  .header {
+    font-size: 1.2rem;
+    width: 100%;
+    z-index: 1;
+    padding-bottom: 75px 0;
+    grid-row-start: -1;
+    grid-column-start: 3;
   }
 }
