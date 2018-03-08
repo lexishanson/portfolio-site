@@ -245,7 +245,7 @@ h1 {
 
 .top-section {
   display: grid;
-  grid-template-rows: 1px minMax(50px, 100px) 0.5fr minmax(250px, 400px) 1fr;
+  grid-template-rows: 1px minMax(50px, 100px) 1fr minmax(250px, 350px) 1fr;
   grid-template-columns: 1px 1fr minmax(250px, 500px) 1fr;
   grid-gap: 5px;
   background: linear-gradient(
@@ -582,7 +582,7 @@ figure img:hover {
     grid-column-start: 2;
     grid-row: 2 / 3;
     position: inherit;
-    padding-top: 3rem;
+    padding-top: 50px;
     font-size: 3rem;
   }
 
@@ -607,7 +607,7 @@ figure img:hover {
     font-size: 1.2rem;
     width: 100%;
     z-index: 1;
-    margin: 50px 0 75px 0;
+    margin: 25px 0 75px 0;
     grid-row-start: -2;
     grid-column-start: 1;
     grid-column-end: -1;
@@ -652,7 +652,7 @@ figure img:hover {
 @media only screen and (min-width: 767px) and (max-width: 900px) {
   .top-section {
     display: grid;
-    grid-template-rows: 1px minMax(50px, 100px) 0.5fr minmax(250px, 350px) 1fr;
+    grid-template-rows: 1px minMax(50px, 100px) 1fr minmax(250px, 350px) 1fr;
     grid-template-columns: 1px 1fr minmax(250px, 500px) 1fr;
     grid-gap: 5px;
     background: linear-gradient(
