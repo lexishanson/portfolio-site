@@ -4,16 +4,15 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71204511-1"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-function gtag() {
-  dataLayer.push(arguments);
-}
-gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'UA-71204511-1');
+    </script>
 
-gtag('config', 'UA-71204511-1');
-</script>
-
-    <title class="color-7">Lexis Hanson</title>
+    <title class="color-7">Lexis Hanson Portfolio Site</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <meta name="description" content="I'm a software engineer open to chatting about new work opportunities. You can also ask me about personal finance, podcast recommendations, or best running routes in San Francisco.">
@@ -28,8 +27,8 @@ gtag('config', 'UA-71204511-1');
 <body>
   <div id="particles-js">
   </div>
-  <div id="top-section" class="section top-section">
-    <div class="top-section-title color-7">Lexis Hanson</div>
+  <div class="section welcome-section">
+    <div class="welcome-section-title color-7">Lexis Hanson</div>
     <img id="hero-img" src="./assets/lexis_bridge2.png"/>
     <h2 class="hero-h2 color-7">
       Hey there 👋 welcome to my site.
@@ -37,7 +36,7 @@ gtag('config', 'UA-71204511-1');
       <div class="header" id="header">
         <div class="header-inner">
           <div
-            id="top-link"
+            id="welcome-link"
             class="header-item title color-7"
           >
             Lexis Hanson
@@ -201,7 +200,10 @@ gtag('config', 'UA-71204511-1');
 
             <h3>Skills</h3>
             <div class="icons-grid">
-              <i class="icon devicon-javascript-plain"></i>
+              <!-- <i class="icon devicon-javascript-plain"></i> -->
+               <!-- <img class="icon" src="https://unpkg.com/simple-icons@latest/icons/javascript.svg" />
+              <img class="icon" src="https://unpkg.com/simple-icons@latest/icons/gatsby.svg" /> -->
+
               <i class="icon devicon-react-plain-wordmark"></i>
               <i class="icon devicon-nodejs-plain-wordmark"></i>
               <i class="icon devicon-express-original"></i>
@@ -266,119 +268,11 @@ gtag('config', 'UA-71204511-1');
   <div class="footer-container">
     <div class="footer background-7">
       <div class="center-column">
-        © Lexis Hanson 2017
+        © Lexis Hanson 2019
       </div>
     </div>
   </div>
-    <script src="particles.js"></script>
-    <script type="text/javascript">
-    let HEADER_HEIGHT = 100;
-console.log('moop');
-let HEADER_ELEMENT = document.getElementById('header');
-console.log('header el', HEADER_ELEMENT);
-let MENU_OPEN;
-
-/* HAMBURGER MENU */
-
-const closeMenu = () => {
-  HEADER_ELEMENT.classList.remove('is-open');
-  MENU_OPEN = false;
-  const hamburgerIcon = document.querySelectorAll('.menu-toggle svg')[0];
-  const closeIcon = document.querySelectorAll('.menu-toggle svg')[1];
-  closeIcon.style.display = 'none';
-  hamburgerIcon.style.display = 'block';
-};
-
-const openMenu = () => {
-  HEADER_ELEMENT.classList.add('is-open');
-  MENU_OPEN = true;
-  const hamburgerIcon = document.querySelectorAll('.menu-toggle svg')[0];
-  const closeIcon = document.querySelectorAll('.menu-toggle svg')[1];
-  closeIcon.style.display = 'block';
-  hamburgerIcon.style.display = 'none';
-};
-
-const toggleMenu = () => (MENU_OPEN ? closeMenu() : openMenu());
-
-document.getElementById('menu-toggle').addEventListener('click', toggleMenu);
-
-const onResize = () => {
-  if (window.innerWidth < 600) {
-    HEADER_ELEMENT.classList.add('hamburger');
-  } else {
-    HEADER_ELEMENT.classList.remove('hamburger');
-  }
-  if (MENU_OPEN) {
-    toggleMenu();
-  }
-};
-onResize();
-window.onresize = onResize;
-
-/* SCROLL */
-
-const scrollIt = e => {
-  closeMenu();
-  console.log('offset', e.offsetTop);
-  window.scrollTo({
-    behavior: 'smooth',
-    left: 0,
-    top: e.offsetTop
-  });
-};
-
-const addScrollTo = linkAndSection => {
-  console.log('linkAndSection', linkAndSection);
-  linkAndSection.link.addEventListener('click', () =>
-    scrollIt(linkAndSection.section)
-  );
-};
-
-const sectionsAndLinks = ['top', 'projects', 'about', 'contact'].map(
-  linkName => ({
-    section: document.getElementById(`${linkName}-section`),
-    link: document.getElementById(`${linkName}-link`)
-  })
-);
-
-sectionsAndLinks.forEach(addScrollTo);
-console.log('sectionsAndLinks', sectionsAndLinks);
-
-const hightlightOnScreenLink = () => {
-  let closestElementAbove = undefined;
-  let lastClosestHeight = undefined;
-  sectionsAndLinks.forEach((sectionAndLink, i) => {
-    const topOffset =
-      sectionAndLink.section.offsetTop - 50 - window.pageYOffset;
-    if (i === 0 || (topOffset <= 50 && topOffset >= lastClosestHeight)) {
-      lastClosestHeight = topOffset;
-      closestElementAbove = sectionAndLink;
-    }
-    sectionAndLink.link.classList.remove('active-class');
-  });
-  closestElementAbove.link.classList.add('active-class');
-};
-
-const toggleHeaderFixed = () => {
-  if (window.innerHeight < window.pageYOffset + HEADER_HEIGHT) {
-    HEADER_ELEMENT.classList.add('stuck-to-top');
-  } else {
-    HEADER_ELEMENT.classList.remove('stuck-to-top');
-  }
-};
-
-const onScroll = () => {
-  toggleHeaderFixed();
-  hightlightOnScreenLink();
-};
-onScroll();
-document.addEventListener('scroll', onScroll);
-
-particlesJS.load('particles-js', 'assets/particles-config.json', function() {
-  console.log('callback - particles.js config loaded');
-});
-
-// TODO: add Google analytics
-</script>
+  <script src="particles.js"></script>
+  <script type="text/javascript" src="./index.js"></script>
   </body>
 </html>
