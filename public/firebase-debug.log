@@ -1,32 +1,32 @@
-[debug] [2019-06-18T05:26:23.555Z] ----------------------------------------------------------------------
-[debug] [2019-06-18T05:26:23.557Z] Command:       /Users/lhanson/.nvm/versions/node/v11.10.0/bin/node /usr/local/bin/firebase serve
-[debug] [2019-06-18T05:26:23.557Z] CLI Version:   3.17.4
-[debug] [2019-06-18T05:26:23.557Z] Platform:      darwin
-[debug] [2019-06-18T05:26:23.557Z] Node Version:  v11.10.0
-[debug] [2019-06-18T05:26:23.558Z] Time:          Mon Jun 17 2019 22:26:23 GMT-0700 (Pacific Daylight Time)
-[debug] [2019-06-18T05:26:23.558Z] ----------------------------------------------------------------------
+[debug] [2019-06-18T05:45:58.262Z] ----------------------------------------------------------------------
+[debug] [2019-06-18T05:45:58.266Z] Command:       /Users/lhanson/.nvm/versions/node/v11.10.0/bin/node /usr/local/bin/firebase serve
+[debug] [2019-06-18T05:45:58.266Z] CLI Version:   3.17.4
+[debug] [2019-06-18T05:45:58.266Z] Platform:      darwin
+[debug] [2019-06-18T05:45:58.266Z] Node Version:  v11.10.0
+[debug] [2019-06-18T05:45:58.267Z] Time:          Mon Jun 17 2019 22:45:58 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-06-18T05:45:58.267Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2019-06-18T05:26:23.573Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2019-06-18T05:26:23.573Z] > authorizing via signed-in user
-[debug] [2019-06-18T05:26:23.575Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/personal-site-31cb2  
+[debug] [2019-06-18T05:45:58.284Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-18T05:45:58.285Z] > authorizing via signed-in user
+[debug] [2019-06-18T05:45:58.286Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/personal-site-31cb2  
   
- Mon Jun 17 2019 22:26:23 GMT-0700 (Pacific Daylight Time)
-[debug] [2019-06-18T05:26:24.092Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-18T05:26:24.093Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/personal-site-31cb2/tokens  
+ Mon Jun 17 2019 22:45:58 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-06-18T05:45:59.755Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-18T05:45:59.756Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/personal-site-31cb2/tokens  
   
- Mon Jun 17 2019 22:26:24 GMT-0700 (Pacific Daylight Time)
-[debug] [2019-06-18T05:26:24.475Z] <<< HTTP RESPONSE 200
+ Mon Jun 17 2019 22:45:59 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-06-18T05:46:00.071Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from '/Users/lhanson/Projects/javascript/portfolio-pure-js'...
 [info] 
-[debug] [2019-06-18T05:26:24.477Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/personal-site-31cb2  
+[debug] [2019-06-18T05:46:00.074Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/personal-site-31cb2  
   
- Mon Jun 17 2019 22:26:24 GMT-0700 (Pacific Daylight Time)
-[debug] [2019-06-18T05:26:24.725Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-18T05:26:24.726Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/188623987627/clients/_:getWebAppConfig  
+ Mon Jun 17 2019 22:46:00 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-06-18T05:46:00.329Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-18T05:46:00.329Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/188623987627/clients/_:getWebAppConfig  
   
- Mon Jun 17 2019 22:26:24 GMT-0700 (Pacific Daylight Time)
-[debug] [2019-06-18T05:26:24.965Z] <<< HTTP RESPONSE 200
+ Mon Jun 17 2019 22:46:00 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-06-18T05:46:00.501Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] ✔  hosting: Local server: http://localhost:5000
 

@@ -451,8 +451,7 @@ figure img:hover {
 }
 
 .about-section .icon {
-  padding: 3px;
-  /* border: 1px red solid; */
+  border: 1px yellow solid;
   color: rgb(46, 66, 125);
   font-size: 60px;
 }
