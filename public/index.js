@@ -50,8 +50,6 @@ const scrollIt = e => {
 };
 
 const addScrollTo = linkAndSection => {
-  console.log('linkAndSection', linkAndSection);
-  debugger;
   linkAndSection.link.addEventListener('click', () =>
     scrollIt(linkAndSection.section)
   );
@@ -63,14 +61,12 @@ const sectionsAndLinks = ['welcome', 'projects', 'about', 'contact'].map(
     link: document.querySelector(`.menu-${linkName}-link`)
   })
 );
-console.log(sectionsAndLinks);
 sectionsAndLinks.forEach(addScrollTo);
 
 const hightlightOnScreenLink = () => {
   let closestElementAbove = undefined;
   let lastClosestHeight = undefined;
   sectionsAndLinks.forEach((sectionAndLink, i) => {
-    debugger;
     const topOffset =
       sectionAndLink.section.offsetTop - 50 - window.pageYOffset;
     if (i === 0 || (topOffset <= 50 && topOffset >= lastClosestHeight)) {

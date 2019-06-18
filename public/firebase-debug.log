@@ -1,32 +1,44 @@
-[debug] [2019-06-18T05:45:58.262Z] ----------------------------------------------------------------------
-[debug] [2019-06-18T05:45:58.266Z] Command:       /Users/lhanson/.nvm/versions/node/v11.10.0/bin/node /usr/local/bin/firebase serve
-[debug] [2019-06-18T05:45:58.266Z] CLI Version:   3.17.4
-[debug] [2019-06-18T05:45:58.266Z] Platform:      darwin
-[debug] [2019-06-18T05:45:58.266Z] Node Version:  v11.10.0
-[debug] [2019-06-18T05:45:58.267Z] Time:          Mon Jun 17 2019 22:45:58 GMT-0700 (Pacific Daylight Time)
-[debug] [2019-06-18T05:45:58.267Z] ----------------------------------------------------------------------
+[debug] [2019-06-18T05:58:48.649Z] ----------------------------------------------------------------------
+[debug] [2019-06-18T05:58:48.651Z] Command:       /Users/lhanson/.nvm/versions/node/v11.10.0/bin/node /usr/local/bin/firebase serve
+[debug] [2019-06-18T05:58:48.651Z] CLI Version:   3.17.4
+[debug] [2019-06-18T05:58:48.651Z] Platform:      darwin
+[debug] [2019-06-18T05:58:48.651Z] Node Version:  v11.10.0
+[debug] [2019-06-18T05:58:48.652Z] Time:          Mon Jun 17 2019 22:58:48 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-06-18T05:58:48.653Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2019-06-18T05:45:58.284Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2019-06-18T05:45:58.285Z] > authorizing via signed-in user
-[debug] [2019-06-18T05:45:58.286Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/personal-site-31cb2  
+[debug] [2019-06-18T05:58:48.666Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-18T05:58:48.666Z] > authorizing via signed-in user
+[debug] [2019-06-18T05:58:48.668Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-06-18T05:58:48.669Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token:
+   '1/uhZIIXoNV2v3VgESTPdoTNfXKz6ZTMzpn829DdITSeZQrx3o39sIIltaIS7ErhZ4',
+  client_id:
+   '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope:
+   'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Mon Jun 17 2019 22:58:48 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-06-18T05:58:48.799Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-18T05:58:48.822Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/personal-site-31cb2  
   
- Mon Jun 17 2019 22:45:58 GMT-0700 (Pacific Daylight Time)
-[debug] [2019-06-18T05:45:59.755Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-18T05:45:59.756Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/personal-site-31cb2/tokens  
+ Mon Jun 17 2019 22:58:48 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-06-18T05:58:49.286Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-18T05:58:49.287Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/personal-site-31cb2/tokens  
   
- Mon Jun 17 2019 22:45:59 GMT-0700 (Pacific Daylight Time)
-[debug] [2019-06-18T05:46:00.071Z] <<< HTTP RESPONSE 200
+ Mon Jun 17 2019 22:58:49 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-06-18T05:58:49.606Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from '/Users/lhanson/Projects/javascript/portfolio-pure-js'...
 [info] 
-[debug] [2019-06-18T05:46:00.074Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/personal-site-31cb2  
+[debug] [2019-06-18T05:58:49.608Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/personal-site-31cb2  
   
- Mon Jun 17 2019 22:46:00 GMT-0700 (Pacific Daylight Time)
-[debug] [2019-06-18T05:46:00.329Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-18T05:46:00.329Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/188623987627/clients/_:getWebAppConfig  
+ Mon Jun 17 2019 22:58:49 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-06-18T05:58:49.853Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-18T05:58:49.854Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/188623987627/clients/_:getWebAppConfig  
   
- Mon Jun 17 2019 22:46:00 GMT-0700 (Pacific Daylight Time)
-[debug] [2019-06-18T05:46:00.501Z] <<< HTTP RESPONSE 200
+ Mon Jun 17 2019 22:58:49 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-06-18T05:58:50.064Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] ✔  hosting: Local server: http://localhost:5000
 
