@@ -1,0 +1,17 @@
+[debug] [2019-06-29T05:31:44.058Z] ----------------------------------------------------------------------
+[debug] [2019-06-29T05:31:44.060Z] Command:       /Users/lhanson/.nvm/versions/node/v11.10.0/bin/node /usr/local/bin/firebase serve --only hosting
+[debug] [2019-06-29T05:31:44.061Z] CLI Version:   3.17.4
+[debug] [2019-06-29T05:31:44.061Z] Platform:      darwin
+[debug] [2019-06-29T05:31:44.061Z] Node Version:  v11.10.0
+[debug] [2019-06-29T05:31:44.062Z] Time:          Fri Jun 28 2019 22:31:44 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-06-29T05:31:44.062Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-29T05:31:44.077Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-29T05:31:44.077Z] > authorizing via signed-in user
+[debug] [2019-06-29T05:31:44.080Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/personal-site-31cb2  
+  
+ Fri Jun 28 2019 22:31:44 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-06-29T05:31:44.387Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-29T05:31:44.388Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/personal-site-31cb2/tokens  
+  
+ Fri Jun 28 2019 22:31:44 GMT-0700 (Pacific Daylight Time)
