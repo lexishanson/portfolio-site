@@ -1,4 +1,4 @@
-const DEBOUNCE_TIME = 3000;
+// const DEBOUNCE_TIME = 300;
 const MOBILE_BREAKPOINT = 767;
 const NAV_ELEMENT = document.getElementById('nav');
 const MENU_TOGGLE = document.querySelector('.menu-toggle');
@@ -10,22 +10,15 @@ particlesJS.load('particles-js', 'assets/particles-config.json');
 
 /* Mobile Menu */
 const closeMenu = () => {
-  // NAV_ELEMENT.classList.remove('is-open');
-  NAV_ELEMENT.setAttribute('aria-expanded', false);
-  // MENU_OPEN = false;
-  //when menu-toggle data-src is false, show hamburger
-
   const [menuIcon, closeIcon] = document.querySelectorAll('.menu-toggle svg');
+  NAV_ELEMENT.setAttribute('aria-expanded', false);
   closeIcon.style.display = 'none';
   menuIcon.style.display = 'inline';
 };
 
 const openMenu = () => {
-  // NAV_ELEMENT.classList.add('is-open');
-  NAV_ELEMENT.setAttribute('aria-expanded', true);
-  // MENU_OPEN = true
   const [menuIcon, closeIcon] = document.querySelectorAll('.menu-toggle svg');
-  // const [, closeIcon] = document.querySelectorAll('.menu-toggle svg');
+  NAV_ELEMENT.setAttribute('aria-expanded', true);
   closeIcon.style.display = 'inline';
   menuIcon.style.display = 'none';
 };
@@ -36,29 +29,10 @@ const toggleMenu = () => {
     : openMenu();
 };
 
-document.getElementById('menu-toggle').addEventListener('click', toggleMenu);
-
-const onResize = () => {
-  if (window.innerWidth < MOBILE_BREAKPOINT) {
-    NAV_ELEMENT.classList.add('nav--sticky');
-    IS_MOBILE = true;
-  } else {
-    NAV_ELEMENT.classList.remove('nav--sticky');
-    IS_MOBILE = false;
-  }
-  // navOffset = getComputedStyle(NAV_ELEMENT).lineHeight;
-  // console.log(navOffset);
-  // if (NAV_ELEMENT.dataset.isOpen === 'true') {
-  //   toggleMenu();
-  // }
-};
-// TODO: turn into IIFE?
-onResize();
-window.onresize = onResize;
-
-/* SCROLL */
+/* Scroll */
 const scrollTop = top => {
-  closeMenu();
+  if (NAV_ELEMENT.getAttribute('aria-expanded') === 'true') closeMenu();
+  console.log(top);
   window.scrollTo({
     behavior: 'smooth',
     left: 0,
@@ -69,6 +43,14 @@ const scrollTop = top => {
 const scrollToSection = linkAndSection => {
   linkAndSection.link.addEventListener('click', () => {
     const offsetY = linkAndSection.section.offsetTop - navOffset;
+    console.log(
+      'section offsettop',
+      linkAndSection.section.offsetTop,
+      'navoffset',
+      navOffset,
+      'offsety',
+      offsetY
+    );
     scrollTop(offsetY);
   });
 };
@@ -76,29 +58,33 @@ const scrollToSection = linkAndSection => {
 const sectionsAndLinks = ['welcome', 'projects', 'about', 'contact'].map(
   linkName => ({
     section: document.querySelector(`.${linkName}-section`),
-    // link: document.querySelector(`.menu-${linkName}-link`)
     link: document.querySelector(`.nav-page-link__${linkName}`)
   })
 );
 sectionsAndLinks.forEach(scrollToSection);
 
 const hightlightOnScreenLink = () => {
-  let closestElementAbove = undefined;
+  let nextHighlightedEl = undefined;
   let lastClosestHeight = undefined;
   sectionsAndLinks.forEach((sectionAndLink, i) => {
     const topOffset = sectionAndLink.section.offsetTop - window.pageYOffset;
-    if (sectionAndLink.section.classList.contains('about-section')) {
-    }
-
     if (i === 0 || (topOffset <= navOffset && topOffset >= lastClosestHeight)) {
       lastClosestHeight = topOffset;
-      closestElementAbove = sectionAndLink;
+      nextHighlightedEl = sectionAndLink;
     }
-    sectionAndLink.link.classList.remove('active');
   });
-  closestElementAbove.link.classList.add('active');
+
+  if (!nextHighlightedEl.link.classList.contains('active')) {
+    sectionsAndLinks.forEach(item => {
+      if (item.link.classList.contains('active')) {
+        item.link.classList.remove('active');
+      }
+      nextHighlightedEl.link.classList.add('active');
+    });
+  }
 };
 
+/* Sticky Nav */
 const toggleNavFixed = () => {
   if (IS_MOBILE || window.innerHeight < window.pageYOffset + NAV_HEIGHT) {
     NAV_ELEMENT.classList.add('nav--sticky');
@@ -109,37 +95,51 @@ const toggleNavFixed = () => {
   }
 };
 
-const onScroll = () => {
-  //TODO: debounce/throttle fn here...
-  // TODO: don't call highlight every time for every element
+/* Event Handlers */
+const onResize = () => {
+  console.log('resized');
+  if (window.innerWidth < MOBILE_BREAKPOINT) {
+    NAV_ELEMENT.classList.add('nav--sticky');
+    IS_MOBILE = true;
+  } else {
+    console.log('yee');
+    NAV_ELEMENT.classList.remove('nav--sticky');
+    IS_MOBILE = false;
+  }
+};
 
-  // check navShouldBeFixed(offset = 50);
-  // if yes, make it sticky
-  // console.log('getting called');
-  // with each scroll...
-  // check the offsetTop of each sectionAndLink.section...
-  // whichever is the smallest (and still above zero)
+const onLoad = () => {
+  onResize();
+  onScroll();
+};
+
+const onScroll = () => {
   toggleNavFixed();
-  // console.log('foo');
   hightlightOnScreenLink();
 };
 
-// const debounce = (fn, debounceTime) => {
-//   // console.log(debounceTime);
-//   return setTimeout(fn, debounceTime);
+// const debounce = (func, delay) => {
+//   let inDebounce;
+//   return function() {
+//     const context = this;
+//     const args = arguments;
+//     clearTimeout(inDebounce);
+//     inDebounce = setTimeout(() => func.apply(context, args), delay);
+//   };
 // };
 
-const throttle = (func, limit) => {
-  let inThrottle;
-  return (...args) => {
-    if (!inThrottle) {
-      func(...args);
-      inThrottle = setTimeout(() => (inThrottle = false), limit);
-    }
-  };
-};
-const debouncedHandleScroll = () => throttle(onScroll, DEBOUNCE_TIME);
+// const throttle = (func, limit) => {
+//   let inThrottle;
+//   return (...args) => {
+//     if (!inThrottle) {
+//       func(...args);
+//       inThrottle = setTimeout(() => (inThrottle = false), limit);
+//     }
+//   };
+// };
 
-onScroll();
-
+/* Event Listeners */
+document.addEventListener('DOMContentLoaded', onLoad);
 document.addEventListener('scroll', onScroll);
+window.addEventListener('resize', onResize());
+MENU_TOGGLE.addEventListener('click', toggleMenu);
