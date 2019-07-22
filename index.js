@@ -86,7 +86,11 @@ const hightlightOnScreenLink = () => {
 
 /* Sticky Nav */
 const toggleNavFixed = () => {
-  if (IS_MOBILE || window.innerHeight < window.pageYOffset + NAV_HEIGHT) {
+  if (IS_MOBILE || window.innerHeight < window.pageYOffset + navOffset + 1) {
+    // if (
+    //   IS_MOBILE ||
+    //   NAV_ELEMENT.getBoundingClientRect().top + NAV_ELEMENT.offsetHeight
+    // ) {
     NAV_ELEMENT.classList.add('nav--sticky');
     // navOffset = getComputedStyle(NAV_ELEMENT).lineHeight;
     navOffset = document.querySelector('.nav--sticky').offsetHeight;

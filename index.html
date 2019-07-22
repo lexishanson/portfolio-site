@@ -19,20 +19,20 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"
+      content="initial-scale=1, maximum-scale=1, width=device-width"
     />
     <meta
       name="description"
       content="I'm a software engineer specializing in JavaScript, React, Node.js, and Gatsby. Also passionate about personal finance and investing, podcasts, and yoga."
     />
     <meta name="author" content="Lexis Hanson" />
-    <script src="https://d3js.org/d3.v4.js"></script>
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
     <link rel="icon" href="/assets/favicon.png" type="image/ico" />
     <link
+      href="https://fonts.googleapis.com/css?family=Lato|Raleway|PT+Serif&display=swap"
       rel="stylesheet"
-      href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
     />
+    <link rel="stylesheet" href="https://use.typekit.net/lez2zrx.css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
 
@@ -80,7 +80,16 @@
       <div class="title">Lexis Hanson</div>
       <div class="content-inner">
         <div class="hero-img-container">
-          <img id="hero-img" src="./assets/lexis_bridge2.png" />
+          <picture>
+            <source srcset="./assets/lexis_bridge.webp" type="image/webp" />
+            <source srcset="./assets/lexis_bridge.png" type="image/jpeg" />
+            <img
+              id="hero-img"
+              src="./assets/lexis_bridge.png"
+              alt=""
+              loading="lazy"
+            />
+          </picture>
         </div>
         <h2 class="hero-subtitle">
           Hey there 👋 welcome to my site.
@@ -92,6 +101,152 @@
         <h1 class="section-header">Projects</h1>
         <div class="box projects-box">
           <div class="item-parent">
+            <div class="item" id="proj-img">
+              <figure>
+                <div class="img-container">
+                  <a
+                    href="https://dsc-tv-staging-pr-139.herokuapp.com/tv/"
+                    target="blank"
+                  >
+                    <picture>
+                      <source
+                        srcset="./assets/video-gallery.webp"
+                        type="image/webp"
+                      />
+                      <source srcset="./video-gallery.png" type="image/png" />
+                      <img
+                        src="./assets/video-gallery.png"
+                        id="proj-img"
+                        alt="citiy weather trends github"
+                        loading="lazy"
+                      />
+                    </picture>
+                  </a>
+                </div>
+                <figcaption>
+                  <div>
+                    <h2>Video Gallery (Salesforce)</h2>
+                    <p>
+                      A collection app of videos, keynotes, sessions, and
+                      webinars for Salesforce Developers, with easy-to-use
+                      filtering and refinements, enabling developers to quickly
+                      find and view the content they care about.
+                    </p>
+                    <p>
+                      Built with: JavaScript, React, Gatsby, Algolia, YouTube
+                      API, Heorku, Docker, Jest.
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="item">
+              <figure>
+                <div class="img-container">
+                  <a
+                    href="https://www.youtube.com/watch?v=I2B_zxQC5mU"
+                    target="blank"
+                  >
+                    <picture>
+                      <source
+                        srcset="./assets/modern-javascript-features-presentation.webp"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="./assets/modern-javascript-features-presentation.png"
+                        type="image/png"
+                      />
+                      <img
+                        src="./assets/modern-javascript-features-presentation.png"
+                        id="proj-img"
+                        loading="lazy"
+                        alt=""
+                      />
+                    </picture>
+                  </a>
+                </div>
+                <figcaption>
+                  <div>
+                    <h2>Presentation: Modern JavaScript Features</h2>
+                    <p>
+                      Presented in front of an audience of 250 attendees at
+                      Salesforce TrailheaDX '19 conference.
+                    </p>
+                    <p>
+                      This session explores fundamental modern JavaScript
+                      features, such as arrow functions, rest/spread operators,
+                      and destructuring. We'll also dive into managing
+                      asynchronous behavior, and new ways to iterate over
+                      objects and arrays. You'll learn practical tricks you can
+                      use with these new features to improve the code you write
+                      each day.
+                    </p>
+                  </div>
+
+                  <div class="project-links">
+                    <a
+                      href="https://www.youtube.com/watch?v=I2B_zxQC5mU"
+                      alt="Modern JavaScript Features Every Developer Should Know YouTube link"
+                      target="blank"
+                    >
+                      <img
+                        src="./assets/youtube-logo.png"
+                        style="display:in-line;width:2rem;height:2rem;"
+                        loading="lazy"
+                    /></a>
+                    <a
+                      href="https://drive.google.com/file/d/1WP7dwHk7TfBjFIN3LPfoglR9JpeXmTfk/view?usp=sharing"
+                      alt="Modern JavaScript Features Every Developer Should Know pdf link"
+                      target="blank"
+                    >
+                      <img
+                        src="./assets/google-drive-logo.png"
+                        style="display:in-line;width:2rem;height:2rem;"
+                        loading="lazy"
+                    /></a>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="item" id="proj-img">
+              <figure>
+                <div class="img-container">
+                  <a
+                    href="https://trailhead.salesforce.com/sample-gallery"
+                    target="blank"
+                  >
+                    <picture>
+                      <source
+                        srcset="./assets/sample-gallery.webp"
+                        type="image/webp"
+                      />
+                      <source srcset="./weather5.png" type="image/png" />
+                      <img
+                        src="./assets/sample-gallery.png"
+                        id="proj-img"
+                        alt="citiy weather trends github"
+                        loading="lazy"
+                      />
+                    </picture>
+                  </a>
+                </div>
+                <figcaption>
+                  <div>
+                    <h2>Sample App Gallery (Salesforce)</h2>
+                    <p>
+                      A site featuring Salesforce Developer Evangelists' most
+                      popular Sample Apps, providing access to the developer
+                      community to view, learn, and build upon pre-built
+                      features and use cases.
+                    </p>
+                    <p>
+                      Built with: JavaScript, React, Gatsby, Heroku, Docker,
+                      Jest.
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
             <div class="item">
               <figure>
                 <div class="img-container">
@@ -99,27 +254,41 @@
                     href="https://github.com/salesforce/design-system-react"
                     target="blank"
                   >
-                    <img src="./assets/DSR-wide.png" id="proj-img" alt="" />
+                    <picture>
+                      <source
+                        srcset="./assets/DSR-wide.webp"
+                        type="image/webp"
+                      />
+                      <source srcset="./assets/DSR-wide.png" type="image/png" />
+                      <img
+                        src="./assets/DSR-wide.png"
+                        id="proj-img"
+                        alt=""
+                        loading="lazy"
+                      />
+                    </picture>
                   </a>
                 </div>
                 <figcaption>
-                  <h2>Design System React</h2>
-                  <p>
-                    Design System React is an open-source project, imlementing
-                    React Components using the Salesforce Lightning Design
-                    System. Contributions include creating components from
-                    scratch, fixing issues, writing tests, and building
-                    documentation.
-                  </p>
-                  <p>
-                    The goal of this project is to provide an easy-to-use way
-                    for Salesforce Developers to use React components based on
-                    the Salesforce Lightning Design System (SLDS).
-                  </p>
-                  <p>
-                    Built with: Javascript, React, CSS, Enzyme, Chai, and Mocha.
-                  </p>
-
+                  <div>
+                    <h2>Design System React</h2>
+                    <p>
+                      Design System React is an open-source project, imlementing
+                      React Components using the Salesforce Lightning Design
+                      System. Contributions include creating components from
+                      scratch, fixing issues, writing tests, and building
+                      documentation.
+                    </p>
+                    <p>
+                      The goal of this project is to provide an easy-to-use way
+                      for Salesforce Developers to use React components based on
+                      the Salesforce Lightning Design System (SLDS).
+                    </p>
+                    <p>
+                      Built with: Javascript, React, CSS, Enzyme, Chai, and
+                      Mocha.
+                    </p>
+                  </div>
                   <div class="project-links">
                     <a
                       href="https://github.com/salesforce/design-system-react"
@@ -130,6 +299,7 @@
                       <img
                         src="./assets/github-inline.png"
                         style="display:in-line;width:2rem;height:2rem;"
+                        loading="lazy"
                     /></a>
                   </div>
                 </figcaption>
@@ -143,27 +313,41 @@
                     target="blank"
                     class="project"
                   >
-                    <img src="./assets/cryptoprices.png" alt="CryptoPrices" />
+                    <picture>
+                      <source
+                        srcset="./assets/cryptoprices.webp"
+                        type="image/webp"
+                      />
+                      <source srcset="./cryptoprices.png" type="image/png" />
+                      <img
+                        src="./assets/cryptoprices.png"
+                        alt="CryptoPrices"
+                        loading="lazy"
+                      />
+                    </picture>
                   </a>
                 </div>
                 <figcaption>
-                  <h2>CryptoPrices</h2>
-                  <p>
-                    CryptoPrices provides cryptocurrency prices real-time in a
-                    voice-enabled interface, on Google Home devices and on the
-                    Google Assistant iOS/Android app. Users can request the
-                    price of a cryptocurrency in terms of a fiat (traditional)
-                    currency or another cryptocurrency.
-                  </p>
-                  <p>
-                    This app was published with Actions on Google and granted a
-                    "Gaining Traction" award from Google, with 60k monthly
-                    invocations at the time of the milestone.
-                  </p>
-                  <p>
-                    Built with: Javascript, Node, Firebase, Google Cloud
-                    Functions, Dialogflow (NLP), and CryptoCompare API.
-                  </p>
+                  <div>
+                    <h2>CryptoPrices</h2>
+                    <p>
+                      CryptoPrices provides cryptocurrency prices real-time in a
+                      voice-enabled interface, on Google Home devices and on the
+                      Google Assistant iOS/Android app. Users can request the
+                      price of a cryptocurrency in terms of a fiat (traditional)
+                      currency or another cryptocurrency.
+                    </p>
+                    <p>
+                      This app was published with Actions on Google and granted
+                      a "Gaining Traction" award from Google, with 60k monthly
+                      invocations at the time of the milestone.
+                    </p>
+                    <p>
+                      Built with: Javascript, Node, Firebase, Google Cloud
+                      Functions, Dialogflow (NLP), and CryptoCompare API.
+                    </p>
+                  </div>
+
                   <div class="project-links">
                     <a
                       href="https://github.com/lexishanson/crypto-prices"
@@ -174,6 +358,7 @@
                       <img
                         src="./assets/github-inline.png"
                         style="width:2rem;height:2rem;"
+                        loading="lazy"
                     /></a>
                     <a
                       href="https://assistant.google.com/services/a/uid/00000020df028049?hl=en"
@@ -184,48 +369,7 @@
                       <img
                         src="./assets/google-assistant.png"
                         style="width:2rem;height:2rem;"
-                    /></a>
-                  </div>
-                </figcaption>
-              </figure>
-            </div>
-            <div class="item" id="proj-img">
-              <figure>
-                <div class="img-container">
-                  <a
-                    href="https://github.com/lexishanson/city-weather-trends"
-                    target="blank"
-                  >
-                    <img
-                      src="./assets/weather5.png"
-                      id="proj-img"
-                      alt="citiy weather trends github"
-                    />
-                  </a>
-                </div>
-                <figcaption>
-                  <h2>Weather Trends</h2>
-                  <p>
-                    Weather Trends is a lightweight tool to search for weather
-                    metric trends over a 5-day period. Users search for the
-                    cities they want to track and can view a graph of weather
-                    data.
-                  </p>
-                  <p>
-                    Built with: React, Redux, react-router, jQuery,
-                    OpenWeatherMap API, Google Maps API, Sparklines API, Mocha,
-                    and Chai.
-                  </p>
-                  <div class="project-links">
-                    <a
-                      href="https://github.com/lexishanson/city-weather-trends"
-                      alt="Weather Trends"
-                      title="Github"
-                      target="blank"
-                    >
-                      <img
-                        src="./assets/github-inline.png"
-                        style="width:2rem;height:2rem;"
+                        loading="lazy"
                     /></a>
                   </div>
                 </figcaption>
@@ -235,21 +379,35 @@
               <figure>
                 <div class="img-container">
                   <a href="https://coffeeiq.org/" target="blank">
-                    <img src="./assets/coffeeiq.png" alt="CoffeeIQ" />
+                    <picture>
+                      <source
+                        srcset="./assets/coffeeiq.webp"
+                        type="image/webp"
+                      />
+                      <source srcset="./coffeeiq.png" type="image/png" />
+                      <img
+                        src="./assets/coffeeiq.png"
+                        alt="CoffeeIQ"
+                        loading="lazy"
+                      />
+                    </picture>
                   </a>
                 </div>
                 <figcaption>
-                  <h2>CoffeeIQ</h2>
-                  <p>
-                    CoffeeIQ is a simple app that schedules a coffee break with
-                    a new coworker each week. It regularly pairs up team members
-                    who don’t know each other well, to spread trust and
-                    collaboration across a company.
-                  </p>
-                  <p>
-                    Contributions incldude: building components and page routes.
-                  </p>
-                  <p>Built with: React, Redux, React Router, and Firebase.</p>
+                  <div>
+                    <h2>CoffeeIQ</h2>
+                    <p>
+                      CoffeeIQ is a simple app that schedules a coffee break
+                      with a new coworker each week. It regularly pairs up team
+                      members who don’t know each other well, to spread trust
+                      and collaboration across a company.
+                    </p>
+                    <p>
+                      Contributions incldude: building components and page
+                      routes.
+                    </p>
+                    <p>Built with: React, Redux, React Router, and Firebase.</p>
+                  </div>
                   <div class="project-links">
                     <a
                       href="https://github.com/benshope/coffeeiq"
@@ -260,6 +418,7 @@
                       <img
                         src="./assets/github-inline.png"
                         style="width:2rem;height:2rem;"
+                        loading="lazy"
                     /></a>
                   </div>
                 </figcaption>
@@ -692,6 +851,7 @@
         </div>
       </footer>
     </section>
+    <script src="https://d3js.org/d3.v4.js"></script>
     <script src="particles.js"></script>
     <script type="text/javascript" src="./index.js"></script>
   </body>
