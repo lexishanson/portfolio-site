@@ -124,8 +124,7 @@ nav .title {
   background-color: rgba(255, 255, 255);
   color: var(--main-blue-color);
   cursor: pointer;
-  font-weight: var(--font-weight-semi-bold);
-  font-weight: 600;
+  font-weight: var(--font-weight-bold);
   letter-spacing: .025em;
   line-height: 40px;
   text-transform: uppercase;
@@ -277,7 +276,7 @@ h2.hero-subtitle {
   height: 100vh;
 }
 
-/* PROJECTS */
+/* PROJECTS SECTION */
 
 .projects-box {
   max-width: 800px;
@@ -364,7 +363,7 @@ figure img:hover {
   box-shadow: unset;
 }
 
-/* ABOUT */
+/* ABOUT SECTION*/
 
 .about-content {
   max-width: 800px;
@@ -490,7 +489,7 @@ footer {
     min-height: calc(100vh - 4rem);
   }
 
-  /* Nav Section*/
+  /* NAV SECTION */
 
   .menu-toggle {
     position: absolute;
@@ -523,7 +522,7 @@ footer {
     text-align: center;
   }
 
-  /* Sticky Nav*/
+  /* NAV STICKY */
 
   nav.nav--sticky {
     line-height: 4rem;
@@ -560,7 +559,7 @@ footer {
     margin: 0;
   }
 
-  /*TOP SECTION*/
+  /* WELCOME SECTION */
   .welcome-section {
     min-height: 100vh;
   }
@@ -590,7 +589,7 @@ footer {
     grid-row-start: -2;
   }
 
-  /* About */
+  /* ABOUT SECTION */
   .icons-grid {
     justify-content: center;
   }
