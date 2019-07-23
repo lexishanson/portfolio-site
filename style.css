@@ -17,9 +17,6 @@
   --font-family-default: "proxima-nova", Helvetica, sans-serif;
   --font-family-header: "Lato", sans-serif;
 
-  /* --font-weight-regular: 300;
-  --font-weight-semi-bold: 500;
-  --font-weight-bold: 600; */
   --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-semi-bold: 600;
@@ -106,7 +103,7 @@ nav {
 
 .nav-inner {
   display: flex;
-  max-width: 800px;
+  max-width: 832px;
   align-items: flex-end;
   justify-content: center;
   margin: 0 auto;
@@ -166,6 +163,7 @@ nav:not(.nav--sticky) .nav-page-link:hover {
 .nav--sticky .title {
   display: block;
   flex-grow: 1;
+  padding-left: 16px;
   align-self: center;
   color: var(--main-blue-color);
   cursor: pointer;
@@ -296,10 +294,6 @@ figure {
   box-shadow: 1px 1px 5px rgba(170, 167, 170, .2);
 }
 
-figure .img-container {
-  height: 225px;
-}
-
 figcaption {
   display: flex;
   height: 100%;
@@ -324,9 +318,9 @@ figure img {
   width: 100%;
   height: 100%;
   background: white;
+  max-height: 216px;
   box-shadow: 1px 1px 3px rgba(170, 167, 170, .2);
   cursor: pointer;
-  object-fit: cover;
   -webkit-transition: all .2s ease;
   -moz-transition: all .2s ease;
   -ms-transition: all .2s ease;
@@ -422,7 +416,7 @@ figure img:hover {
   justify-content: center;
   padding: 2px;
   background: white;
-  color: var(--medium-gray-color);
+  color: var(--main-blue-color);
   font-size: var(--font-size-default);
   font-weight: var(--font-weight-semi-bold);
   opacity: 0;

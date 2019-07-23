@@ -17,10 +17,7 @@
 
     <title>Lexis Hanson Portfolio Site</title>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="initial-scale=1, maximum-scale=1, width=device-width"
-    />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
     <meta
       name="description"
       content="I'm a software engineer specializing in JavaScript, React, Node.js, and Gatsby. Also passionate about personal finance and investing, podcasts, and yoga."
@@ -56,6 +53,7 @@
           class="nav-page-link resume"
           href="https://drive.google.com/file/d/1LexA3bzBQ5w1-KcfDYLXbxTP6HjT1lG4/view?usp=sharing"
           target="blank"
+          aria-label="Access Lexis Hanson's Resume as a PDF"
         >
           Resume
         </a>
@@ -86,7 +84,7 @@
             <img
               id="hero-img"
               src="./assets/lexis_bridge.png"
-              alt=""
+              alt="photo of Lexis with the Bay Bridge in the background"
               loading="lazy"
             />
           </picture>
@@ -101,12 +99,13 @@
         <h1 class="section-header">Projects</h1>
         <div class="box projects-box">
           <div class="item-parent">
-            <div class="item" id="proj-img">
+            <div class="item">
               <figure>
                 <div class="img-container">
                   <a
-                    href="https://dsc-tv-staging-pr-139.herokuapp.com/tv/"
+                    href="https://developer.salesforce.com/tv/"
                     target="blank"
+                    aria-label="Salesforce Video Gallery"
                   >
                     <picture>
                       <source
@@ -116,7 +115,6 @@
                       <source srcset="./video-gallery.png" type="image/png" />
                       <img
                         src="./assets/video-gallery.png"
-                        id="proj-img"
                         alt="citiy weather trends github"
                         loading="lazy"
                       />
@@ -125,7 +123,7 @@
                 </div>
                 <figcaption>
                   <div>
-                    <h2>Video Gallery (Salesforce)</h2>
+                    <h2>Video Gallery</h2>
                     <p>
                       A collection app of videos, keynotes, sessions, and
                       webinars for Salesforce Developers, with easy-to-use
@@ -146,6 +144,7 @@
                   <a
                     href="https://www.youtube.com/watch?v=I2B_zxQC5mU"
                     target="blank"
+                    aria-label="Watch Modern JavaScript Features Presentation"
                   >
                     <picture>
                       <source
@@ -158,9 +157,8 @@
                       />
                       <img
                         src="./assets/modern-javascript-features-presentation.png"
-                        id="proj-img"
                         loading="lazy"
-                        alt=""
+                        alt="Thumbnail of Modern JavaScript Features presentation"
                       />
                     </picture>
                   </a>
@@ -186,45 +184,47 @@
                   <div class="project-links">
                     <a
                       href="https://www.youtube.com/watch?v=I2B_zxQC5mU"
-                      alt="Modern JavaScript Features Every Developer Should Know YouTube link"
                       target="blank"
+                      aria-label="View video on Youtube"
                     >
                       <img
                         src="./assets/youtube-logo.png"
                         style="display:in-line;width:2rem;height:2rem;"
                         loading="lazy"
+                        alt="youtube icon"
                     /></a>
                     <a
                       href="https://drive.google.com/file/d/1WP7dwHk7TfBjFIN3LPfoglR9JpeXmTfk/view?usp=sharing"
-                      alt="Modern JavaScript Features Every Developer Should Know pdf link"
                       target="blank"
+                      aria-label="Modern JavaScript Features presentation slides (PDF)"
                     >
                       <img
                         src="./assets/google-drive-logo.png"
                         style="display:in-line;width:2rem;height:2rem;"
                         loading="lazy"
+                        alt="google drive icon"
                     /></a>
                   </div>
                 </figcaption>
               </figure>
             </div>
-            <div class="item" id="proj-img">
+            <div class="item">
               <figure>
                 <div class="img-container">
                   <a
-                    href="https://trailhead.salesforce.com/sample-gallery"
+                    href="https://developer.salesforce.com/docs/api-explorer"
                     target="blank"
+                    aria-label="Salesforce API Explorer website"
                   >
                     <picture>
                       <source
-                        srcset="./assets/sample-gallery.webp"
+                        srcset="./assets/api-explorer.webp"
                         type="image/webp"
                       />
-                      <source srcset="./weather5.png" type="image/png" />
+                      <source srcset="./api-explorer.png" type="image/png" />
                       <img
-                        src="./assets/sample-gallery.png"
-                        id="proj-img"
-                        alt="citiy weather trends github"
+                        src="./assets/api-explorer.png"
+                        alt="Screenshot of Salesforce API Explorer"
                         loading="lazy"
                       />
                     </picture>
@@ -232,12 +232,57 @@
                 </div>
                 <figcaption>
                   <div>
-                    <h2>Sample App Gallery (Salesforce)</h2>
+                    <h2>API Explorer</h2>
                     <p>
-                      A site featuring Salesforce Developer Evangelists' most
-                      popular Sample Apps, providing access to the developer
-                      community to view, learn, and build upon pre-built
-                      features and use cases.
+                      Provides visibility to Salesforce REST API's and related
+                      resources and endpoints, with the ability for a user to
+                      try out live API requests against their developer org.
+                    </p>
+                    <p>
+                      Contributions include: upgrading parts of data model in
+                      existing project to support new OpenAPI 3 spec (from
+                      Swagger 2.0), including additional parsing and validation
+                      to support new functionality.
+                    </p>
+                    <p>
+                      Built with: JavaScript, React, Node.js, Express, React on
+                      Rails
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="item">
+              <figure>
+                <div class="img-container">
+                  <a
+                    href="https://trailhead.salesforce.com/sample-gallery"
+                    target="blank"
+                    aria-label="Salesforce Sample Gallery"
+                  >
+                    <picture>
+                      <source
+                        srcset="./assets/sample-gallery.webp"
+                        type="image/webp"
+                      />
+                      <source srcset="./sample-gallery.png" type="image/png" />
+                      <img
+                        src="./assets/sample-gallery.png"
+                        alt="salesforce sample gallery"
+                        loading="lazy"
+                        alt="Graphic describing Salesforce Sample Gallery - Get inspired with sample apps, explore reference code, and learn best practices"
+                      />
+                    </picture>
+                  </a>
+                </div>
+                <figcaption>
+                  <div>
+                    <h2>Sample App Gallery</h2>
+                    <p>
+                      An index of Salesforce Developer Evangelists' most popular
+                      Sample Apps, providing access for the developer community
+                      to view, learn, and build upon pre-built features and use
+                      cases.
                     </p>
                     <p>
                       Built with: JavaScript, React, Gatsby, Heroku, Docker,
@@ -251,19 +296,22 @@
               <figure>
                 <div class="img-container">
                   <a
-                    href="https://github.com/salesforce/design-system-react"
+                    href="https://react.lightningdesignsystem.com/"
                     target="blank"
+                    aria-label="Salesforce Design System React website"
                   >
                     <picture>
                       <source
-                        srcset="./assets/DSR-wide.webp"
+                        srcset="./assets/design-system-react.webp"
                         type="image/webp"
                       />
-                      <source srcset="./assets/DSR-wide.png" type="image/png" />
+                      <source
+                        srcset="./assets/design-system-react.png"
+                        type="image/png"
+                      />
                       <img
-                        src="./assets/DSR-wide.png"
-                        id="proj-img"
-                        alt=""
+                        src="./assets/design-system-react.png"
+                        alt="Design System React graphics"
                         loading="lazy"
                       />
                     </picture>
@@ -275,9 +323,11 @@
                     <p>
                       Design System React is an open-source project, imlementing
                       React Components using the Salesforce Lightning Design
-                      System. Contributions include creating components from
-                      scratch, fixing issues, writing tests, and building
-                      documentation.
+                      System.
+                    </p>
+                    <p>
+                      Contributions include: creating components from scratch,
+                      fixing issues, writing tests, and building documentation.
                     </p>
                     <p>
                       The goal of this project is to provide an easy-to-use way
@@ -292,14 +342,15 @@
                   <div class="project-links">
                     <a
                       href="https://github.com/salesforce/design-system-react"
-                      alt="Design System React"
                       title="Github"
                       target="blank"
+                      aria-label="Salesforce Design System React GitHub Repository"
                     >
                       <img
                         src="./assets/github-inline.png"
                         style="display:in-line;width:2rem;height:2rem;"
                         loading="lazy"
+                        alt="GitHub icon"
                     /></a>
                   </div>
                 </figcaption>
@@ -312,6 +363,7 @@
                     href="https://assistant.google.com/services/a/uid/00000020df028049?hl=en"
                     target="blank"
                     class="project"
+                    aria-label="Google Assitant App Directory Page for CryptoPrices"
                   >
                     <picture>
                       <source
@@ -321,7 +373,7 @@
                       <source srcset="./cryptoprices.png" type="image/png" />
                       <img
                         src="./assets/cryptoprices.png"
-                        alt="CryptoPrices"
+                        alt="CryptoPrices graphics"
                         loading="lazy"
                       />
                     </picture>
@@ -351,74 +403,28 @@
                   <div class="project-links">
                     <a
                       href="https://github.com/lexishanson/crypto-prices"
-                      alt="CryptoPrices"
                       title="Github"
                       target="blank"
+                      aria-label="CryptoPrices GitHub Repository"
                     >
                       <img
                         src="./assets/github-inline.png"
                         style="width:2rem;height:2rem;"
                         loading="lazy"
+                        alt="GitHub logo"
                     /></a>
                     <a
                       href="https://assistant.google.com/services/a/uid/00000020df028049?hl=en"
                       alt="CryptoPrices"
                       title="Action on Google Store"
                       target="blank"
+                      aria-label="Google Assitant App Directory Page for CryptoPrices"
                     >
                       <img
                         src="./assets/google-assistant.png"
                         style="width:2rem;height:2rem;"
                         loading="lazy"
-                    /></a>
-                  </div>
-                </figcaption>
-              </figure>
-            </div>
-            <div class="item">
-              <figure>
-                <div class="img-container">
-                  <a href="https://coffeeiq.org/" target="blank">
-                    <picture>
-                      <source
-                        srcset="./assets/coffeeiq.webp"
-                        type="image/webp"
-                      />
-                      <source srcset="./coffeeiq.png" type="image/png" />
-                      <img
-                        src="./assets/coffeeiq.png"
-                        alt="CoffeeIQ"
-                        loading="lazy"
-                      />
-                    </picture>
-                  </a>
-                </div>
-                <figcaption>
-                  <div>
-                    <h2>CoffeeIQ</h2>
-                    <p>
-                      CoffeeIQ is a simple app that schedules a coffee break
-                      with a new coworker each week. It regularly pairs up team
-                      members who don’t know each other well, to spread trust
-                      and collaboration across a company.
-                    </p>
-                    <p>
-                      Contributions incldude: building components and page
-                      routes.
-                    </p>
-                    <p>Built with: React, Redux, React Router, and Firebase.</p>
-                  </div>
-                  <div class="project-links">
-                    <a
-                      href="https://github.com/benshope/coffeeiq"
-                      alt="CoffeeIQ"
-                      title="Github"
-                      target="blank"
-                    >
-                      <img
-                        src="./assets/github-inline.png"
-                        style="width:2rem;height:2rem;"
-                        loading="lazy"
+                        alt="Actions on Google logo"
                     /></a>
                   </div>
                 </figcaption>
@@ -454,17 +460,9 @@
 
             <h3>Skills</h3>
             <div class="icons-grid">
-              <!-- <i class="icon devicon-javascript-plain"></i> -->
-              <!-- <img class="icon" src="https://unpkg.com/simple-icons@latest/icons/javascript.svg" />
-              <img class="icon" src="https://unpkg.com/simple-icons@latest/icons/gatsby.svg" /> -->
               <!-- Gatsby -->
               <div class="skills icon">
                 <div class="icon-img-container">
-                  <!-- <img
-                    class="icon-img"
-                    src="./assets/gatsby.svg"
-                    alt="gatsby icon"
-                  /> -->
                   <svg
                     role="img"
                     xmlns="http://www.w3.org/2000/svg"
@@ -798,6 +796,7 @@
             href="mailto:lexishanson@gmail.com"
             class="contact-icon"
             target="_blank"
+            aria-label="Send email to lexishanson@gmail.com"
           >
             <svg style="width:75px;height:75px" viewBox="0 0 24 24">
               <path
@@ -808,7 +807,9 @@
           <a
             href="http://www.linkedin.com/in/lexishanson"
             id="contact-icon"
+            rel="noopener"
             target="_blank"
+            aria-label="Lexis Hanson's LinkedIn profile"
           >
             <svg style="width:75px;height:75px" viewBox="0 0 24 24">
               <path
@@ -818,8 +819,10 @@
           </a>
           <a
             href="http://www.github.com/lexishanson"
+            rel="noopener"
             id="github"
             target="_blank"
+            aria-label="Lexis Hanson's GitHub profile"
           >
             <svg style="width:75px;height:75px" viewBox="0 0 24 24" id="github">
               <path
@@ -827,14 +830,24 @@
               />
             </svg>
           </a>
-          <a href="http://www.twitter.com/lexishanson" target="_blank">
+          <a
+            href="http://www.twitter.com/lexishanson"
+            target="_blank"
+            rel="noopener"
+            aria-label="Lexis Hanson's Twitter profile"
+          >
             <svg style="width:75px;height:75px" viewBox="0 0 24 24">
               <path
                 d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z"
               />
             </svg>
           </a>
-          <a href="http://www.medium.com/@lexishanson" target="_blank">
+          <a
+            href="http://www.medium.com/@lexishanson"
+            target="_blank"
+            rel="noopener"
+            aria-label="Lexis Hanson's Medium profile"
+          >
             <svg style="width:75px;height:75px" viewBox="0 0 24 24">
               <path
                 d="M4.37,7.3C4.4,7.05 4.3,6.81 4.12,6.65L2.25,4.4V4.06H8.05L12.53,13.89L16.47,4.06H22V4.4L20.4,5.93C20.27,6.03 20.2,6.21 20.23,6.38V17.62C20.2,17.79 20.27,17.97 20.4,18.07L21.96,19.6V19.94H14.12V19.6L15.73,18.03C15.89,17.88 15.89,17.83 15.89,17.59V8.5L11.4,19.9H10.8L5.57,8.5V16.14C5.5,16.46 5.63,16.78 5.86,17L7.96,19.57V19.9H2V19.57L4.1,17C4.33,16.78 4.43,16.46 4.37,16.14V7.3Z"

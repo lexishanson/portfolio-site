@@ -101,12 +101,10 @@ const toggleNavFixed = () => {
 
 /* Event Handlers */
 const onResize = () => {
-  console.log('resized');
   if (window.innerWidth < MOBILE_BREAKPOINT) {
     NAV_ELEMENT.classList.add('nav--sticky');
     IS_MOBILE = true;
   } else {
-    console.log('yee');
     NAV_ELEMENT.classList.remove('nav--sticky');
     IS_MOBILE = false;
   }
